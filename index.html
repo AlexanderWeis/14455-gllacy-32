@@ -7,12 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Подключение нестандартного шрифта Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <title>HTML Academy: Глейси</title>
 
@@ -27,40 +23,40 @@
 <header class="page-header">
 
   <div class="page-header-logo">
-    <img src="assets/gllacy-logo.svg" width="137" height="56" alt="Логотип фирмы GllacyShop – натуральное мороженное для всех">
+    <img src="img/gllacy-logo.svg" width="137" height="56" alt="Логотип фирмы GllacyShop – натуральное мороженное для всех">
   </div>
   
-  <nav class="page-header-navigation">
+  <nav class="navigation">
 
     <ul>
-      <li class="page-header-navigation-item"><a href="#catalog-options">Каталог</a></li>
-      <li class="page-header-navigation-item"><a href="#ordering-steps">Доставка и оплата</a></li>
-      <li class="page-header-navigation-item"><a href="#testimonials">О компании</a></li>
+      <li class="navigation-item"><a href="#catalog-options">Каталог</a></li>
+      <li class="navigation-item"><a href="#ordering-steps">Доставка и оплата</a></li>
+      <li class="navigation-item"><a href="#testimonials">О компании</a></li>
     </ul>
     <!-- TODO +7 800 555-86-28 -->
-    <button type="button" id="search"></button>
-    <button type="button" id="customer-login">Вход</button>
+    <button type="button" class="search"></button>
+    <button type="button" class="customer-login">Вход</button>
     <!-- TODO Корзина - элемент списка из одного пункта -->
-    <button type="button" id="basket">Пусто</button> 
+    <button type="button" class="basket">Пусто</button> 
 
   </nav>
   
-  <div class="page-header-promo-left-column">
+  <div class="promo-description">
     <!-- Добавляем невидимый H1 заголовок для семантики -->
     <h1 class="visually-hidden">Онлайн-магазин вкуснейшего мороженного GllacyShop</h1>
     <p><span>Нежный пломбир<br>
     с клубничным джемом</span></p>
     <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
     <div class="page-header-btn-catalog">
-      <button type="button">Заказать</button>
+      <a href="#">Заказать</a>
     </div>
   </div>
 
-  <div class="page-header-slider-right-column">
+  <div class="promo-slider">
     <!-- Белый фон. Или .png с прозрачностью или обработка картинки-->
-    <img src="assets/catalog-ice-red-1.png" width="306" height="507" alt="Нежное клубничное мороженное от фирмы GllacyShop – натуральное мороженное для всех">
-    <img src="assets/catalog-ice-orange-2.png" width="306" height="507" alt="Вкусное сливочное мороженное от фирмы GllacyShop – натуральное мороженное для всех"> 
-    <img src="assets/catalog-ice-orange-2.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу от фирмы GllacyShop – натуральное мороженное для всех"> 
+    <img src="img/catalog-ice-red-1.png" width="306" height="507" alt="Нежное клубничное мороженное от фирмы GllacyShop – натуральное мороженное для всех">
+    <img src="img/catalog-ice-orange-2.png" width="306" height="507" alt="Вкусное сливочное мороженное от фирмы GllacyShop – натуральное мороженное для всех"> 
+    <img src="img/catalog-ice-orange-2.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу от фирмы GllacyShop – натуральное мороженное для всех"> 
   
     <!-- TODO Control-Elements -->
     <!-- TODO Social Icons -->
