@@ -1,0 +1,162 @@
+ /* General styles */
+
+ /* Fonts */
+
+@font-face {
+   font-family: "Inter", sans-serif;
+   src: url("/fonts/inter-400.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Inter", sans-serif;
+   src: url("/fonts/inter-700.woff2") format("woff2");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Inter", sans-serif;
+   src: url("/fonts/inter-900.woff2") format("woff2");
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* All classes after second live-stream */
+
+.page-header {
+}
+.page-header-logo {
+}
+.navigation {
+}
+.navigation-list {
+}
+.navigation-item {
+}
+.navigation-user {
+}
+.navigation-phone-number {
+}
+.navigation-search {
+}
+.visually-hidden {
+}
+.navigation-customer-login {
+}
+.navigation-basket {
+}
+.main-index {
+}
+.promo-section {
+}
+.promo-description {
+}
+.promo-title {
+}
+.promo-btr-order {
+}
+.promo-slider {
+}
+.slider-image {
+}
+.slider-button {
+}
+.slider-prev {
+}
+.slider-next {
+}
+.slider-image-preview {
+}
+.pagination {
+}
+.slider-pagination {
+}
+.slider-pagination-item {
+}
+.slider-pagination-button {
+}
+.slider-pagination-button-current {
+}
+.social-icons {
+}
+.social-list {
+}
+.social-item {
+}
+.button {
+}
+.banners {
+}
+.banners-title {
+}
+.banner {
+}
+.banner-raspberry {
+}
+.product-order {
+}
+.banner-marshmallow {
+}
+.products {
+}
+.products-title {
+}
+.product-item {
+}
+.product-price {
+}
+.icon-shopping-cart {
+}
+.advantages {
+}
+.advantages-text {
+}
+.icon-item-advantages {
+}
+.snippet-blognews {
+}
+.blog-news {
+}
+.blog-news-title {
+}
+.subscription {
+}
+.subscription-text {
+}
+.btn-send {
+}
+.delivery {
+}
+.delivery-title {
+}
+.delivery-text {
+}
+.delivery-form-text {
+}
+.icon-info {
+}
+.contacts {
+}
+.contacts-list {
+}
+.contacts-items {
+}
+.footer-menu {
+}
+.footer-menu-list {
+}
+.footer-menu-items {
+}
+.footer-copyright {
+}
+.about-text {
+}
+.htmlacademy-link {
+}
+.line-decoration {
+}
