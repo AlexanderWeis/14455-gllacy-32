@@ -1,162 +1,433 @@
- /* General styles */
+/* General styles */
+
+/* .visually-hidden { */
+   /* position: absolute; */
+   /* width: 1px; */
+   /* height: 1px; */
+   /* margin: -1px; */
+   /* padding: 0; */
+   /* overflow: hidden; */
+   /* border: 0; */
+   /* clip: rect(0 0 0 0) */
+/* } */
+
+/* Временное решение с цветом */
+
+body {
+   /* font-family: "PT Sans", sans-serif; */
+   /* font-size: 16px; */
+   /* line-height: 24px; */
+   color: #242424;
+   background-color: #FEAFC3;
+}
+
+/* Navigation */
+.navigation {
+}
+
+.navigation-search {
+   background-image: url(../images/icons/icon-search.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+}
+
+.navigation-customer-login {
+   background-image: url(../images/icons/icon-log-in.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+}
+
+.navigation-basket {
+   background-image: url(../images/icons/icon-cart.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+}
+
+/* Убираем маркеры у списков */
+
+.navigation-item,
+.social-item,
+.footer-menu-item,
+.slider-pagination-item,
+.icon-item-advantages,
+.breadcrumbs-item,
+.catalog-filter-item,
+.pagination-item {
+   list-style-type: none; 
+}
+
+/* Убираем маркеры у линков */
+
+/*
+Катя, какой вариант лучше, указывать с ul.класс, 
+или достаточно просто класс указать? Я попробовал
+оба варианта и оба работают, но что правильнее, 
+я не уверен.
+*/
+
+/* ul.navigation-list a, */ 
+/* ul.footer-menu-list a */
+
+/* TODO ПЕРЕДЕЛАТЬ */
+
+.navigation-list a,
+.footer-menu-list a,
+.snippet-blognews a,
+.navigation-phone-number {
+   text-decoration: none;
+}
+
+footer-menu-item,
+navigation-item
+
+/* Section 1: Sliders */
+
+.circle {
+   width: 312px;
+   height: 312px;
+   border-radius: 50%;
+   border: none;
+   background-color:#FFCBD8;
+}
+
+.circle-small {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: none;
+   background-color:#FFCBD8; 
+   ;
+}
+
+.slider-button {
+   border-radius: 50%;
+   border: 2px solid #fcfcfc;
+   fill: none;
+   width: 38px;
+   height: 38px;
+}
+
+.slider-prev {
+   background-image: url(../images/icons/icon-arrow-left.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.slider-next {
+   background-image: url(../images/icons/icon-arrow-right.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.slider-pagination-button {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   border: none;
+   background-color: #FEB7C9;
+}
+
+.slider-pagination-button-current {
+   background-color: #FCFCFC;
+}
+
+/* Section 2: Banners */
+
+.banners {
+   width: 1170px;
+   height: 416px;
+}
+
+.banner-raspberry,
+.banner-marshmallow {
+   width: 570px;
+   height: 268px;
+   background-image: url(../images/banner-underlay.png);
+   background-repeat: no-repeat;
+}
+.banner-raspberry-wrapper {
+   max-width: 321px;
+   height: auto;
+   padding: 40px; 
+}
+
+.banner-marshmallow-wrapper {
+   max-width: 294px;
+   height: 268px;
+   padding: 40px;  
+}
+
+.banner-marshmallow-image {
+   position: relative;
+   padding-right: 1111px;
+}
+
+/* Section 3: Products */
+
+.products {
+   width: 1170px;
+   height: 480px;
+}
+
+.product-item-image{
+   width: 270px;
+   height: 184px;
+}
+
+.product-item {
+   width: 270px;
+   height: 332px;
+   background-color: #fcfcfc;
+}
+
+.product-item p,
+.product-item h3 {
+   display: inline-block;
+}
+
+.icon-shopping-cart {
+   width: 32px;
+   height: 32px;
+   border: 0 solid #ff2f64;;
+   /* overflow: hidden; */
+   border-radius: 50%;
+   background-color: #ff2f64;
+   background-image: url(../images/icons/icon-shopping-cart.svg);
+}
+
+/* Section 4: */
+
+/* Added background-pattern to border 
+** Added support for Firefox until V15.0 -moz-border-image
+** Added support for Safari, Chrome until V15.0, Android and iOS -webkit-border-image
+** Added support for Opera until V15.0 -o-border-image
+*/
+
+.advantages {
+   width: 1170px;
+   height: 480px;
+   background-image: url(../images/backgrounds/background-waffle.jpg);
+   padding: 80px 80px 0 80px;
+   /* margin-top: 80px; */
+   /* padding-top: 80px; */
+   /* padding-bottom: 80px; */
+   /* border: 20px solid #40c4c8; */
+   /* -moz-border-image: url(../images/pattern-waffle.png) 30 round round; */
+   /* -webkit-border-image: url(../images/pattern-waffle.png) 30 round round;  */
+   /* -o-border-image: url(../images/pattern-waffle.png) 30 round round; */
+   /* border-image: url(../images/pattern-waffle.png) 30 round round; */ 
+}
+
+.advantages-text {
+   text-align: center;
+}
+
+.advantages-icon {
+   width: 48px;
+   height: 48px;
+   border: 2px solid #2D3440;
+   border-radius: 50%;
+   fill: none;
+}
+
+.icon-ice {
+   background-image: url(../images/icons/icon-ice-cream.svg);
+   background-repeat: no-repeat;
+   background-position: center;      
+}
+
+.icon-leaf {
+   background-image: url(../images/icons/icon-leaf.svg);
+   background-repeat: no-repeat;
+   background-position: center;      
+}
+
+.icon-cow {
+   background-image: url(../images/icons/icon-cow.svg);
+   background-repeat: no-repeat;
+   background-position: center;      
+}
+
+.icon-thermometer {
+   background-image: url(../images/icons/icon-thermometer.svg);
+   background-repeat: no-repeat;
+   background-position: center;      
+}
+
+/* Section 5: */
+
+/* Added background-pattern to border 
+** Added support for Firefox until V15.0 -moz-border-image
+** Added support for Safari, Chrome until V15.0, Android and iOS -webkit-border-image
+** Added support for Opera until V15.0 -o-border-image
+*/
+
+.subscription {
+   background-image: url(../images/pattern-postal.png);
+   width: 1170px;
+   height: 480px;
+   /* border: 5px solid #40c4c8; */
+   /* -moz-border-image: url(../images/pattern-postal.png) 5 round round; */
+   /* -webkit-border-image: url(../images/pattern-postal.png) 5 round round; */
+   /* -o-border-image: url(../images/pattern-postal.png) 5 round round; */
+   /* border-image: url(../images/pattern-postal.png) 5 round round; */
+}
+
+/* .visually-hidden { */
+   /* position: absolute; */
+   /* clip: rect(0 0 0 0); */
+   /* width: 1px; */
+   /* height: 1px; */
+   /* margin: -1px; */
+   /* } */
+
+product-item {
+   width: 270px;
+   height: 332px;
+   background-color: black;
+}
+
+/* Article: Snippet with blognews */
+
+.snippet-blognews {
+   background-image: url(../images/backgrounds/background-ice-cream.jpg);
+   width: 570px;
+   height: 216px;  
+}
+
+/* Section 5: Subscription */
+
+.subscription {
+   width: 570px;
+   height: 216px;
+   background-image: url(../images/backgrounds/background-postal.jpg);
+}
+
+.subscription-underlay {
+   width: 558px;
+   height: 208px;
+   margin: -40px auto;
+   background-image: url(../images/subscription-underlay.png);
+}
+
+/* Section 6: Delivery */
+
+.delivery {
+   width: 1170px;
+   height: 534px;
+   background-image: url(../images/backgrounds/background-delivery.jpg);
+}
+
+.delivery-underlay {
+   width: 500px;
+   height: auto;
+   background-image: url(../images/delivery-underlay.png);
+   margin: 64px auto 64px 64px;
+   padding: 40px 40px;
+}
+
+.delivery-form-text {
+   padding: 40px 80px 40px 40px;
+}
+
+.icon-info {
+   background-image: url(../images/icons/icon-info.svg);
+}
+
+/* Section 7: Contacs */
+
+.contacts {
+   width: 1170px;
+   height: 492px;
+   background-image: url(../images/backgrounds/background-contact.jpg);
+}
+
+.contact-underlay {
+   width: 343px;
+   height: auto;
+   /* background-image: url(../images/contact-underlay.png); */
+   background-color: #fcfcfc;
+   margin: 64px 64px auto 64px;
+   padding: 40px;
+}
+
+/* Buttons */
+.button {
+   width: auto;
+   height: 46px;
+   padding: 12px;
+   border: none;
+}
+
+.button-red {
+   background-color: #FF2F64;
+   color:#FCFCFC;
+}
+
+.button-white {
+   background-color: #FCFCFC;
+   color: #2D3440;
+   text-decoration: none;
+}
+
+.button-pink {
+   background-color: #FEC7D5; 
+   color: #2D3440;
+   text-decoration: none;
+   margin-left: 16px;
+   margin-right: 16px;
+
+}
+
+/* Social Icons */
+
+.social-button {
+   width: 24px;
+   height: 24px;
+}
+
+.social-item-vk {
+   background-image: url(../images/icons/icon-social-vk.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+}
+
+.social-item-facebook {
+   background-image: url(../images/icons/icon-social-facebook.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+}
+
+.social-item-instagram {
+   background-image: url(../images/icons/icon-social-instagram.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+}
 
  /* Fonts */
 
-/* @font-face {
-   font-family: "Inter";
-   src: url("..fonts/inter-400.woff2") format("woff2");
-   font-weight: 400;
-   font-style: normal;
-   font-display: swap;
-}
+ /* @font-face { */
+   /* font-family: "Inter"; */
+   /* src: url("..fonts/inter-400.woff2") format("woff2"); */
+   /* font-weight: 400; */
+   /* font-style: normal; */
+   /* font-display: swap; */
+/* } */
 
-@font-face {
-   font-family: "Inter";
-   src: url("..fonts/inter-700.woff2") format("woff2");
-   font-weight: 700;
-   font-style: normal;
-   font-display: swap;
-}
+/* @font-face { */
+   /* font-family: "Inter"; */
+   /* src: url("..fonts/inter-700.woff2") format("woff2"); */
+   /* font-weight: 700; */
+   /* font-style: normal; */
+   /* font-display: swap; */
+/* } */
 
-@font-face {
-   font-family: "Inter";
-   src: url("..fonts/inter-900.woff2") format("woff2");
-   font-weight: 900;
-   font-style: normal;
-   font-display: swap;
-} */
+/* @font-face { */
+   /* font-family: "Inter"; */
+   /* src: url("..fonts/inter-900.woff2") format("woff2"); */
+   /* font-weight: 900; */
+   /* font-style: normal; */
+   /* font-display: swap; */
+/* }  */
 
 /* All classes after second live-stream */
-
-.page-header {
-}
-.page-header-logo {
-}
-.navigation {
-}
-.navigation-list {
-}
-.navigation-item {
-}
-.navigation-user {
-}
-.navigation-phone-number {
-}
-.navigation-search {
-}
-.visually-hidden {
-}
-.navigation-customer-login {
-}
-.navigation-basket {
-}
-.main-index {
-}
-.promo-section {
-}
-.promo-description {
-}
-.promo-title {
-}
-.promo-btr-order {
-}
-.promo-slider {
-}
-.slider-image {
-}
-.slider-button {
-}
-.slider-prev {
-}
-.slider-next {
-}
-.slider-image-preview {
-}
-.pagination {
-}
-.slider-pagination {
-}
-.slider-pagination-item {
-}
-.slider-pagination-button {
-}
-.slider-pagination-button-current {
-}
-.social-icons {
-}
-.social-list {
-}
-.social-item {
-}
-.button {
-}
-.banners {
-}
-.banners-title {
-}
-.banner {
-}
-.banner-raspberry {
-}
-.product-order {
-}
-.banner-marshmallow {
-}
-.products {
-}
-.products-title {
-}
-.product-item {
-}
-.product-price {
-}
-.icon-shopping-cart {
-}
-.advantages {
-}
-.advantages-text {
-}
-.icon-item-advantages {
-}
-.snippet-blognews {
-}
-.blog-news {
-}
-.blog-news-title {
-}
-.subscription {
-}
-.subscription-text {
-}
-.btn-send {
-}
-.delivery {
-}
-.delivery-title {
-}
-.delivery-text {
-}
-.delivery-form-text {
-}
-.icon-info {
-}
-.contacts {
-}
-.contacts-list {
-}
-.contacts-items {
-}
-.footer-menu {
-}
-.footer-menu-list {
-}
-.footer-menu-items {
-}
-.footer-copyright {
-}
-.about-text {
-}
-.htmlacademy-link {
-}
-.line-decoration {
-}
