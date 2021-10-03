@@ -33,9 +33,6 @@ body {
    line-height: 24px;
    color: #242424;
    background-color: #FEAFC3;
-   padding-left: 0 auto;
-   /*For IE6 Shenanigans*/
-   /* text-align:center;  */
 }
 
 /* FONTS: Formating for Headings */
@@ -91,7 +88,7 @@ body {
 
 .navigation-item:nth-last-child(3) {
    display:inline-block;
-   margin-right: 0x;
+   margin-right: 0;
    padding:0;
 }
 
@@ -237,19 +234,19 @@ body {
 
 .slider-pagination-item:nth-last-child(3) {
    display:inline-block;
-   margin-right: 0x;
+   margin-right: 0;
    padding:0;
 }
 
 .social-item {
    display:inline-block;
-   margin-right: 16px;
+   margin-right: 26px;
    padding:0;
 }
 
 .social-item:nth-last-child(3) {
    display:inline-block;
-   margin-right: 0x;
+   margin-right: 0;
    padding:0;
 }
 
@@ -674,8 +671,8 @@ body {
 .breadcrumbs-item {
    padding:0;
    display:inline-block;
-   margin-left: 8 px;
-   margin-right: 8 px;
+   margin-left: 8px;
+   margin-right: 8px;
    font-weight: bold;
    text-decoration:underline;
 }
@@ -684,7 +681,7 @@ body {
    display:inline-block;
    margin-left: 8px;
    margin-right: 8px;
-   weight: 20px;
+   width: 20px;
    height: 20px;
    padding:0;
    background-image: url(../images/icons/icon-arrow_tail_right.svg);
@@ -719,7 +716,7 @@ body {
 .catalog-product-selection {
    border-radius: 20px 20px 20px 20px;
    height: 36px;
-   padding-top: 8;
+   padding-top: 8px;
    padding-bottom: 8px;
    padding-left: 15px;
    padding-right: 63px;
@@ -739,9 +736,9 @@ body {
    padding:0;
 }
    
-.catalog-filter-item:nth-last-child {
+.catalog-filter-item:nth-last-child(5) {
    display:inline-block;
-   margin-right: 0x;
+   margin-right: 0;
    padding:0;
    }
    
@@ -786,7 +783,7 @@ body {
 
 .pagination-item:nth-last-child(5) {
    display:inline-block;
-   margin-right: 0x;
+   margin-right: 0;
    padding:0;
 }
 
