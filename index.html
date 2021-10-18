@@ -20,8 +20,6 @@
 
 <body>
 
-  <main class="main">
-
     <!-- Блок 1: Шапка и навигация -->
 
     <header class="header">
@@ -88,6 +86,7 @@
     </header>
 
     <!-- Блок 2: Основное содержание страницы -->
+    <main class="main main-container">
 
     <!-- Cекция 1: Cлайдер -->
 
@@ -285,8 +284,10 @@
                 </a>
               </p>
             </div>
-            <img class="banner-image" src="images/banner-malinka.png" alt="Малинка даром для мороженного" width="181"
-              height="284">
+            <p class="raspberry-image">
+              <img class="banner-image" src="images/banner-malinka.png" alt="Малинка даром для мороженного" width="181"
+                height="240">
+            </p>
           </div>
         </article>
 
@@ -304,9 +305,9 @@
                 </a>
               </p>
             </div>
-            <p class="banner-image2">
+            <p class="marshmallow-image">
               <img class="banner-image" src="images/banner-marshmelou.png" alt="Зефирки даром для мороженного"
-                width="232" height="359">
+                width="232" height="249">
             </p>
           </div>
         </article>
@@ -326,7 +327,7 @@
       </p>
 
       <!-- Список товаров -->
-      <div class="ice-products">
+
         <ul class="product-list">
 
           <li class="product-card">
@@ -418,7 +419,6 @@
           </li>
 
         </ul>
-      </div>
 
     </section>
 
@@ -529,7 +529,9 @@
                 <input type="text" name="date" placeholder="01.04.2020" required>
               </label>
               <label class="form-text item-telefon">
-                Телефон<br>
+                Телефон
+                <!-- <span class="icon-info"></span> -->
+                <br>
                 <input type="tel" name="phone-number" placeholder="+7 800 999-00-00" pattern="[0-9]{7,}" minlength="7"
                   maxlength="15" required>
               </label><br>
@@ -539,7 +541,7 @@
                 <br>
                 <input type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8" minlength="7" required>
               </label>
-              <button class="button button-red button-margin" type="submit">
+              <button class="delivery-submit button button-red button-margin" type="submit">
                 <span class="btn-padding">Отправить</span>
               </button>
             </form>
@@ -557,7 +559,6 @@
       </h2>
 
       <div class="contact-underlay">
-        <div class="contact-underlay-wrapper">
           <p class="contact-normal text-padding">
             Адрес главного офиса и&nbsp;офлайн-магазина:
           </p>
@@ -578,7 +579,6 @@
           <button class="button button-red button-margin button-margin-left" type="button">
             <span class="btn-padding">Форма обратной связи</span>
           </button>
-        </div>
       </div>
 
     </section>

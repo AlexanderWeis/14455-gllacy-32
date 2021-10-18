@@ -32,6 +32,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -41,12 +42,6 @@ body {
   background-color: #feafc3;
   /* outline: 5px solid green;
   outline-offset: -5px; */
-}
-
-ul, li {
-  display: block;
-  padding: 0;
-  margin: 0;
 }
 
 .container {
@@ -60,6 +55,10 @@ ul, li {
   width: 1170px;
   margin: 0 auto;
   text-align: left;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 /* ===> Hidden headings and element captions */
@@ -206,6 +205,10 @@ ul, li {
   position: relative;
 }
 
+.nav-search {
+  padding: 0;
+}
+
 .icon-info,
 .icon-ice,
 .icon-leaf,
@@ -232,16 +235,16 @@ ul, li {
   content: url("../images/icons/icon-log-in.svg");
   width: 18px;
   height: 18px;
-  top: 30%;
-  left: 0;
+  top: 8px;
+  left: 25px;
 }
 
 .nav-basket::before {
   content: url("../images/icons/icon-basket.svg");
   width: 18px;
   height: 18px;
-  top: 25%;
-  left: 0;
+  top: 6px;
+  left: 25px;
 }
 
 .social-button {
@@ -350,8 +353,10 @@ ul, li {
   outline-offset: -5px; */
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
   align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
 
 }
 
@@ -361,7 +366,6 @@ ul, li {
   min-width: 420px;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-right: 198px;
   /* outline: 5px solid red;
   outline-offset: -5px; */
 }
@@ -400,6 +404,7 @@ ul, li {
   text-align: center;
   /* outline: 5px solid black;
   outline-offset: -5px; */
+  margin-left: auto;
 }
 
 .nav-user-item {
@@ -430,6 +435,7 @@ ul, li {
   padding-bottom: 0;
   /* outline: 5px solid yellow;
   outline-offset: 5px; */
+  /* TODO Пересохранить картинки */
 }
 
 .promo-slider-two {
@@ -603,11 +609,10 @@ ul, li {
   flex-direction: row;
   justify-content: space-between;
   max-width: 1170px;
-  min-height: 312px;
   margin: 0;
-  margin-top: 56px;
   padding: 0;
   border: 0;
+  margin-top: 56px;
   /* outline: 5px solid red;
   outline-offset: -5px; */
 }
@@ -625,16 +630,17 @@ ul, li {
   border-radius: 20px 20px 20px 20px;
   padding: 0;
   margin: 0;
+  border: 0;
 }
 
 .banner-raspberry-wrapper {
   max-width: 570px;
-  min-height: 268px;
+  /* min-height: 268px; */
 }
 
 .banner-marshmallow-wrapper {
   max-width: 570px;
-  min-height: 268px;
+  /* min-height: 268px;  */
 }
 
 .banner-title {
@@ -660,8 +666,21 @@ ul, li {
 
 .banner-image {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
+.raspberry-image {
+  padding: 0;
+  margin: 0;
+  margin-top: 34px;
+}
+
+.marshmallow-image {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+}
 
 /* ===> SECTION 3: PRODUCTS */
 
@@ -670,20 +689,6 @@ ul, li {
   /* outline: 5px solid orange;
   outline-offset: -5px; */
 }
-
-.ice-products {
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1170px;
-}
-
-/* .product-wrapper {
-  outline: 5px solid rgb(98, 0, 255);
-  outline-offset: -5px;
-} */
 
 .product-card {
   background-color: #ffffff;
@@ -808,8 +813,10 @@ ul, li {
 .wrapper-snippet-subscription {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 1170px;
+  /* outline: 5px solid green;
+  outline-offset: -5px; */
 }
 
 /* ARTICLE: SNIPPET FOR BLOGNEWS <=== */
@@ -885,8 +892,14 @@ ul, li {
   margin-top: 6px;
 }
 
+/* .subscription-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 24px;
+} */
+
 .subscription-form input {
-  width: 332px;
+  width: 290px;
   height: 48px;
   margin-left: 26px;
   margin-bottom: 26px;
@@ -962,6 +975,8 @@ ul, li {
   color: #565c66;
 }
 
+/* На FLEXах */
+
 .delivery-form {
   display: flex;
   flex-direction: row;
@@ -971,6 +986,23 @@ ul, li {
   margin-left: 40px;
   margin-right: 40px;
 }
+
+/* На GRIDах */
+
+/* .delivery-form {
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 16px;
+}
+
+.item-address {
+  grid-column: 1 / -1;
+}
+
+.delivery-submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+} */
 
 .delivery-title {
   font-style: normal;
@@ -1022,6 +1054,7 @@ ul, li {
   padding: 0;
   margin-right: 16px;
   margin-bottom: 20px;
+  padding-left: 16px;
   /* outline: 5px solid red;
   outline-offset: -5px; */
 }
@@ -1030,6 +1063,7 @@ ul, li {
   width: 287px;
   padding: 0px;
   margin: 0px;
+  padding-left: 16px;
   /* outline: 5px solid red;
   outline-offset: -5px; */
 }
@@ -1066,13 +1100,6 @@ ul, li {
   /* outline: 5px solid blue;
   outline-offset: -5px; */
 }
-
-/* .contact-underlay-wrapper {
-  padding: 0;
-  margin: 0;
-  outline: 5px solid red;
-  outline-offset: -5px;
-} */
 
 /* .text-padding {
   outline: 5px solid green;
@@ -1133,7 +1160,7 @@ ul, li {
   align-items: center;
   width: 1170px;
   min-height: 153px;
-  background-color: #ebdfc3;
+  /* background-color: #ebdfc3; */
   /* outline: 5px solid green;
   outline-offset: -5px; */
 }
@@ -1169,6 +1196,7 @@ ul, li {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-left: 299px;
   /* outline: 5px solid blue;
   outline-offset: -5px; */
 }
@@ -1181,9 +1209,9 @@ ul, li {
   /* outline: 5px solid yellow;
   outline-offset: -5px; */
   display: block;
-  /* margin-top: 48px;
-  margin-bottom: 48px; */
-  /* margin-right: 112px; */
+  margin-top: 48px;
+  margin-bottom: 48px;
+  margin-right: 0;
 }
 
 .footer-copyright-logo {
@@ -1213,6 +1241,18 @@ ul, li {
   padding: 0;
   /* margin-left: 40px; */
   padding-bottom: 15px;
+}
+
+.footer-menu-list {
+  display:grid;
+  grid-template-columns: repeat(2, 182px);
+  max-width: 380px;
+  row-gap: 8px;
+}
+
+.footer-menu-item {
+  padding: 0;
+  /* margin-top: 8px; */
 }
 
 
@@ -1285,12 +1325,28 @@ a.current {
 
 /* ===> SECTION: PRODUCTS <=== */
 
-.glassy-products {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px;
+
+/* Вариант на FLEXах */
+
+/* .product-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   outline: 5px solid green;
   outline-offset: -5px;
+} */
+
+/* Вариант на GRIDах */
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 30px;
+  /* max-width: 1170px; */
+  /* outline: 5px solid green;
+  outline-offset: -5px; */
 }
 
 .product-list-product-page {
@@ -1380,16 +1436,11 @@ a.current {
 -----------------------STYLE OF BUTTONS-----------------------
 ----------------------------------------------------------- */
 
-.button-circle {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-}
 
 .button {
-  min-width: 92px;
+  /* min-width: 92px; */
   /* height: 46px; */
-  padding: 12px;
+  /* padding: 12px; */
   border: none;
   border-radius: 20px 20px;
   display: inline-block;
@@ -1417,6 +1468,8 @@ a.current {
   border: none;
 }
 
+
+
 .button-margin {
   margin: 0 auto;
   margin-top: 32px;
@@ -1426,6 +1479,7 @@ a.current {
 .button-margin-left {
   margin-left: 40px;
 }
+
 
 /* ------------------------- */
 /* ---------BUTTON---------- */
@@ -1442,6 +1496,10 @@ a.current {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-left: 32px;
 }
 
 .button-white:hover {
@@ -1478,6 +1536,10 @@ a.current {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-left: 32px;
 }
 
 .button-red:hover {
@@ -1514,6 +1576,18 @@ a.current {
   line-height: 20px;
   margin-left: 16px;
   margin-right: 16px;
+  padding-top: 6px;
+  padding-right: 16px;
+  padding-bottom: 6px;
+  padding-left: 40px;
+}
+
+.button-circle {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  top: -4px;
 }
 
 .button-pink:hover {
