@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Заготовка для фавикона
+  <!-- Заготовка для фавикона -->
 <link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.svg">
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
@@ -74,9 +74,50 @@
               </button>
             </li>
             <li class="nav-item nav-user-item">
-              <button type="button" class="button button-pink nav-basket">
-                Пусто
+              <button type="button" class="button button-pink nav-basket-full">
+                2 товара
               </button>
+              <!-- ПОПОВЕР для полной корзины -->
+          <!-- <div class="popover-full popover-cart">
+            <button class="popover-close-button button button-light">
+              2
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+
+            <div class="popover-content">
+              <h2 class="popover-title">Корзина</h2>
+              <ul class="cart-items-list">
+                <li class="cart-item">
+                  <img src="" alt="Мороженное 'Малинка'" width="46" height="46">
+                  <p class="cart-item-title">Малинка</p>
+                  <p class="cart-item-title-subline">1 кг х 310 ₽</p>
+                  <p class="cart-item-price">310 ₽</p>
+                  <button type="button" class="cart-item-button button">
+                    <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <img src="" alt="Мороженное 'Малинка'" width="46" height="46">
+                  <p class="cart-item-title">Бабл-гам</p>
+                  <p class="cart-item-title-subline">1 кг х 310 ₽</p>
+                  <p class="cart-item-price">480 ₽</p>
+                  <button class="cart-item-button button" type="button">
+                    <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="order-area">
+                <button class="delivery-submit button button-red" type="submit">Оформить заказ</button>
+                <p class="cart-item-sum">Итого: 790 ₽</p>
+              </div>
+            </div>
+        </div> -->
             </li>
           </ul>
         </div>
@@ -142,7 +183,7 @@
           </fieldset>
 
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Цена:</legend>
+            <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
 
             <div class="range">
               <div class="range-scale">
@@ -174,28 +215,28 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="fatness" value="0%">
-                    <span class="control-mark"></span>
+                    <span class="control-mark-radio-button"></span>
                     <span class="control-label">0%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="fatness" value="до 10%" checked>
-                    <span class="control-mark"></span>
+                    <span class="control-mark-radio-button"></span>
                     <span class="control-label">до 10%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="fatness" value="до 30%">
-                    <span class="control-mark"></span>
+                    <span class="control-mark-radio-button"></span>
                     <span class="control-label">до 30%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="fatness" value="выше 30%">
-                    <span class="control-mark"></span>
+                    <span class="control-mark-radio-button"></span>
                     <span class="control-label">выше 30%</span>
                   </label>
                 </li>
@@ -212,35 +253,35 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
-                    <span class="control-mark"></span>
+                    <span class="control-mark-checkbox"></span>
                     <span class="control-label">шоколадные</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="sugar-powders" checked>
-                    <span class="control-mark"></span>
+                    <span class="control-mark-checkbox"></span>
                     <span class="control-label">сахарные присыпки</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="fruits">
-                    <span class="control-mark"></span>
+                    <span class="control-mark-checkbox"></span>
                     <span class="control-label">фрукты</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="syrups">
-                    <span class="control-mark"></span>
+                    <span class="control-mark-checkbox"></span>
                     <span class="control-label">сиропы</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="jams">
-                    <span class="control-mark"></span>
+                    <span class="control-mark-checkbox"></span>
                     <span class="control-label">джемы</span>
                   </label>
                 </li>
@@ -261,7 +302,7 @@
 
 <!-- Список товаров -->
 <section class="glassy-products">
-  
+
   <ul class="product-list">
     
     <!-- Первый ряд -->
@@ -277,7 +318,7 @@
         </a>
         <p class="product-card-description">Сливочное мороженое с&nbsp;малиновым джемом</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -294,7 +335,7 @@
         </a>
         <p class="product-card-description">Фисташковый пломбир с&nbsp;кусочками шоколада</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -311,7 +352,7 @@
         </a>
         <p class="product-card-description">Крем-брюле с&nbsp;черничным джемом</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -328,7 +369,7 @@
         </a>
         <p class="product-card-description">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -347,7 +388,7 @@
         </a>
         <p class="product-card-description">Сливочное мороженое&nbsp;с ежевичным джемом</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -364,7 +405,7 @@
         </a>
         <p class="product-card-description">Сливочный пломбир&nbsp;с банановым вкусом</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -381,7 +422,7 @@
         </a>
         <p class="product-card-description">Классический&nbsp;шоколадный пломбир</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -398,7 +439,7 @@
         </a>
         <p class="product-card-description">Сливочный пломбир&nbsp;с клубничным вкусом</p>
       </div>
-      <span class="product-card-price">310 &#8381;/кг</span>
+      <span class="product-card-price">310 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -408,8 +449,7 @@
 
     <li class="product-card">
       <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-lemon-9.jpg" alt="Сорт мороженного" width="168"
-          width="168" height="168">
+        <img class="product-card-image" src="images/products/product-lemon-9.jpg" alt="Сорт мороженного" width="168" height="168">
       </a>
       <div class="product-card-content">
         <a class="product-card-title-link" href="#">
@@ -417,7 +457,7 @@
         </a>
         <p class="product-card-description">Освежающий&nbsp;лимонный сорбет</p>
       </div>
-      <span class="product-card-price">330 &#8381;/кг</span>
+      <span class="product-card-price">330 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -434,7 +474,7 @@
         </a>
         <p class="product-card-description">Сливочный пломбир&nbsp;с ментоловым сиропом</p>
       </div>
-      <span class="product-card-price">320 &#8381;/кг</span>
+      <span class="product-card-price">320 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -451,7 +491,7 @@
         </a>
         <p class="product-card-description">Фисташковый пломбир&nbsp;с шоколадным сиропом</p>
       </div>
-      <span class="product-card-price">360 &#8381;/кг</span>
+      <span class="product-card-price">360 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
@@ -468,7 +508,7 @@
         </a>
         <p class="product-card-description">Классическое&nbsp;крем-брюле </p>
       </div>
-      <span class="product-card-price">280 &#8381;/кг</span>
+      <span class="product-card-price">280 ₽/кг</span>
       <a class="button product-card-button icon-shopping-cart" href="#">
         <span class="visually-hidden">Купить мороженное</span>
       </a>
