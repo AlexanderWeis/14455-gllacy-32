@@ -72,12 +72,13 @@
                   Поиск
                 </span>
               </button>
+            
               <!-- ПОПОВЕР для поиска -->
               <div class="popover-search">
                 <form class="search-engine" action="https://echo.htmlacademy.ru/" method="get">
                   <p class="field-group">
                     <label class="visually-hidden" for="your-name">Поисковый запрос</label>
-                    <input class="form-field field" type="text" id="your-search" name="your-search"
+                    <input class="form-field field" type="search" id="your-search" name="your-search"
                       placeholder="Поиск по сайту">
                   </p>
                 </form>
@@ -85,41 +86,37 @@
             </li>
 
             <li class="nav-item nav-user-item">
-              <button type="button" class="button button-pink nav-customer-login">
-                Вход
-              </button>
+              <button type="button" class="button button-pink nav-customer-login">Вход</button>
+    
               <!-- ПОПОВЕР для входа -->
               <div class="popover-customer popover-customer-login">
 
                 <div class="popover-customer-underlay">
-                  <h2 class="popover-customer-heading">
-                    Личный кабинет
-                  </h2>
+                  <h2 class="popover-customer-heading">Личный кабинет</h2>
                   <div class="popover-customer-form-wrapper">
+                    
                     <form class="popover-customer-form" action="https://echo.htmlacademy.ru">
 
                       <p class="field-group popover-customer-email">
-                        <label class="visually-hidden form-label for="popover-customer-email">Электропочта</label>
+                        <label class="visually-hidden form-label" for="popover-customer-email">Электропочта</label>
                         <input class="popover-login-input" type="email" id="popover-customer-email"
                           name="popover-customer-email" placeholder="email@example.com" required>
                       </p>
 
                       <p class="field-group popover-customer-password">
-                        <label class="visually-hidden form-label for=" popover-customer-password">Пароль</label>
+                        <label class="visually-hidden form-label" for="popover-customer-password">Пароль</label>
                         <input class="popover-login-input" type="password" id="popover-customer-password"
                           name="popover-customer-password" placeholder="Введите пароль" minlength="7" required>
                       </p>
 
                       <div class="popover-customer-login-wrapper">
                         <button class="popover-login button button-red" type="submit">Войти</button>
-
                         <div class="popover-customer-recovery-wrapper">
                           <ul class="recovery-list">
                             <li class="recovery-item"><a class="auth-form-recovery" href="#">Забыли пароль?</a></li>
                             <li class="recovery-item"><a class="auth-form-register" href="#">Регистрация</a></li>
                           </ul>
                         </div>
-
                       </div>
 
                     </form>
@@ -127,6 +124,7 @@
                 </div>
               </div>
             </li>
+
             <li class="nav-item nav-user-item">
               <button type="button" class="button button-pink nav-basket">
                 Пусто
@@ -139,6 +137,7 @@
               </div>
             </li>
           </ul>
+        </div>
       </nav>
     </div>
 
@@ -181,18 +180,18 @@
 
             <button class="button-slider button-slider-prev" type="button">
 
-              <!-- <svg class="arrow-slider" width="6" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.8 1.8a.66.66 0 1 0-.94-.94L.2 5.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L1.6 6l4.2-4.2Z"></path>
-                </svg> -->
+                <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="slider-button-active-black" fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.67.67 0 0 0 0 .94l4.67 4.67a.66.66 0 1 0 .94-.94L5.6 8l4.2-4.2Z" fill="#fcfcfc"/>
+                </svg>
 
               <span class="visually-hidden">Предыдущее мороженное</span>
             </button>
 
             <button class="button-slider button-slider-next" type="button">
 
-              <!-- <svg class="arrow-slider" width="6" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.8 1.8a.66.66 0 1 0-.94-.94L.2 5.53a.66.66 0 0 0 0 .94l4.67 4.67a.66.66 0 0 0 .94-.94L1.6 6l4.2-4.2Z"></path>
-                </svg> -->
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="slider-button-active-black" fill-rule="evenodd" clip-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.67.67 0 0 0 0 .94l4.67 4.67a.66.66 0 1 0 .94-.94L5.6 8l4.2-4.2Z" fill="#fcfcfc"/>
+              </svg>
 
               <span class="visually-hidden">Следующие мороженное</span>
             </button>
@@ -414,6 +413,33 @@
       <!-- Список товаров -->
 
       <ul class="product-list">
+        
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-caspberry-1.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Малинка</h3>
+            </a>
+            <p class="product-card-description">Сливочное мороженое с&nbsp;малиновым джемом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">310 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd" d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" fill="#fcfcfc"/>
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+
+
+
+
 
         <li class="product-card">
           <a class="product-card-image-link" href="catalog.html">
@@ -590,9 +616,9 @@
             <form class="delivery-form" action="https://echo.htmlacademy.ru">
 
               <p class="field-group delivery-form-date">
-                <label class="form-label for=" delivery-date">
+                <label class="form-label" for="your-delivery-date">
                   Дата
-                  <button class="icon-information">
+                  <button class="icon-information" id="your-delivery-date">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
                 </label>
@@ -600,7 +626,7 @@
               </p>
 
               <p class="field-group delivery-form-phone">
-                <label class="form-label for=" delivery-phone">
+                <label class="form-label" for="delivery-phone">
                   Телефон
                 </label>
                 <input type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00"
@@ -608,16 +634,13 @@
               </p>
 
               <p class="field-group delivery-form-address">
-                <label class="form-label for=" delivery-address">
-                  Адрес
-                  <button class="icon-information">
+                <label class="form-label" for="your-delivery-address">Адрес
+                  <button class="icon-information" id="your-delivery-address">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
                 </label>
-                <input type="text" id="delivery-address" name="delivery-address"
-                  placeholder="ул. Большая Конюшенная, 19/8" minlength="7" required>
+                <input type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" minlength="7" required>
               </p>
-
               <button class="delivery-submit button button-red" type="submit">Отправить</button>
 
             </form>

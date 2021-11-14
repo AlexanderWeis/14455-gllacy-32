@@ -419,6 +419,10 @@ body.slider-three-background-yellow {
   margin-top: 8px;
   list-style: none;
   min-width: 160px;
+  
+}
+
+.sub-menu {
   background-color: #fcfcfc;
   border-radius: 4px;
 }
@@ -612,7 +616,7 @@ body.slider-three-background-yellow {
   outline-offset: -5px; */
 }
 
-.button-slider-prev,
+/* .button-slider-prev,
 .button-slider-next {
   position: relative;
 }
@@ -633,19 +637,16 @@ body.slider-three-background-yellow {
   border-radius: 50%;
   top: 25%;
   left: 25%;
-}
+} */
 
-.button-slider-prev {
+.button-slider-next {
   transform: rotate(180deg);
 }
 
-/* Не уверен, правильный ли я выбрал вариант с использованием псевдоэлементов для кнопок.
-То есть вроде бы схема рабочая, но вот для ховеров не уверен как правильно сделать без 
-использования svg вставленного в разметку напрямую */
-
-.button-slider-prev:hover,
-.button-slider-next:hover {
+.button-slider-prev:hover .slider-button-active-black,
+.button-slider-next:hover .slider-button-active-black{
   background-color: #FCFCFC;
+  fill: #2d3440;
 }
 
 .button-slider-prev:focus {
@@ -924,9 +925,38 @@ body.slider-three-background-yellow {
   -webkit-border-radius: 8px 8px 8px 8px;
   -moz-border-radius: 8px 8px 8px 8px;
   border-radius: 8px 8px 8px 8px;
-  margin-bottom: 80px;
+  margin-top: 80px;
   /* outline: 5px solid blue;
   outline-offset: -5px; */
+}
+
+.product-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  outline: 5px solid green;
+  outline-offset: -5px;
+  padding-right: 40px;
+}
+
+.product-card-button {
+  width: 32px;
+  height: 32px;
+  padding-top: 5px;
+  background-color: #ff2f64;
+  border: none;
+  border-radius: 50%;
+}
+
+.product-card-button:hover {
+  background-color: #fcfcfc;
+  box-shadow: inset 0 0 0 2px #000000;
+  outline: none;
+  cursor: pointer;
+}
+
+.product-card-button:hover .shopping-cart-full {
+  fill: #2d3440;
 }
 
 .product-card-content {
