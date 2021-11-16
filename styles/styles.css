@@ -125,7 +125,7 @@ body.slider-three-background-yellow {
 ----------------------------------------------------------- */
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   src: url("../fonts/inter-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -133,7 +133,7 @@ body.slider-three-background-yellow {
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   src: url("../fonts/inter-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -141,7 +141,7 @@ body.slider-three-background-yellow {
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   src: url("../fonts/inter-900.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
@@ -205,6 +205,7 @@ body.slider-three-background-yellow {
   color: #565c66;
 }
 
+/* TODO Добавить классы для ссылок! */
 .footer-menu-item a {
   font-style: normal;
   font-weight: 400;
@@ -311,21 +312,6 @@ body.slider-three-background-yellow {
   margin-right: auto;
 }
 
-/* .icon-ice::before {
-  content: url("../images/icons/icon-ice-cream.svg");
-}
-
-.icon-leaf::before {
-  content: url("../images/icons/icon-leaf.svg");
-}
-
-.icon-cow::before {
-  content: url("../images/icons/icon-cow.svg");
-}
-
-.icon-thermometer::before {
-  content: url("../images/icons/icon-thermometer.svg");
-} */
 
 /* -----------------------------------------------------------
 --------------------------INDEX.html--------------------------
@@ -335,18 +321,21 @@ body.slider-three-background-yellow {
 
 /* ===> NAVIGATION <=== */
 
+/* Общий контейнер для хедера */
+
 .header-wrapper {
   width: 1170px;
   min-height: 104px;
   padding: 0;
   margin: 0;
-  /* outline: 5px solid grey;
-  outline-offset: -5px; */
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* outline: 5px solid grey;
+  outline-offset: -5px; */
 }
 
+/* Логотип */
 .header-logo {
   display: block;
 }
@@ -360,18 +349,21 @@ body.slider-three-background-yellow {
   outline-offset: -5px; */
 }
 
+/* Общий контейнер для навигации */
+
 .nav {
   width: 1033px;
-  /* outline: 5px solid green;
-  outline-offset: -5px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
-
+  /* outline: 5px solid green;
+  outline-offset: -5px; */
 }
+
+/* Левая часть меню */
 
 .nav-menu {
   padding: 0;
@@ -384,122 +376,153 @@ body.slider-three-background-yellow {
   outline-offset: -5px; */
 }
 
-.nav-list > li {
+.nav-list > .nav-item {
   position: relative;
   display: inline-block;
-  margin-right: -4px;
+  margin-right: 4px;
+  /* outline: 5px solid green;
+  outline-offset: -5px; */
 }
-
-.nav-list a {
+.nav-link,
+.nav-link:visited {
   display: block;
   margin-left: -1px;
   padding: 8px 10px;
   color: #2d3440;
 }
 
-.nav-list a:hover {
-  background-color: #fcfcfc;
+.nav-link:hover {
+  background-color: #fdd6e0;
   border-radius: 26px;
-  text-decoration: none;
-  /* outline: 5px solid green;
-  outline-offset: -5px; */
 }
 
-.nav-list a:active {
-  background-color: #ff7799;
+
+.nav-link:focus {
+  background-color: #fdd6e0;
+  border-radius: 22px;
+  outline: none;
+  box-shadow: inset 0 0 0 2px #000000; 
+  /* Если добавляю тень, то появляется обводка у active. Пробовал менять местами focus и active, но не помогло */
+  /* Варианты с бордером "дергаются", даже если я делаю прозрачным... */
 }
 
-.nav-list .sub-menu {
+.nav-link:active {
+  background-color: #fcfcfc;
+  border-color: none;
+  border-radius: 26px;
+}
+
+
+/* Подменю */
+
+.catalog-submenu {
   position: absolute;
-  left: 1px;
   display: none;
+  left: -4px;
+  top: 35px;
   width: 150px;
-  margin: 0;
-  padding: 0;
-  margin-top: 8px;
   list-style: none;
-  min-width: 160px;
-  
-}
-
-.sub-menu {
+  min-width: 140px;
   background-color: #fcfcfc;
   border-radius: 4px;
+  margin-top: 16px;
+  padding-top: 16px;
+  padding-right: 0;
+  padding-bottom: 16px;
+  padding-left: 0;
+  z-index: -10px;
 }
 
-.nav-list .sub-menu a {
-  margin-bottom: -1px;
-  border: 1px solid #e5e5e5;
-  text-decoration: none;
-}
-
-.nav-list > li:hover .sub-menu {
+.catalog-menu:hover .catalog-submenu,
+.catalog-menu:focus-within .catalog-submenu {
   display: block;
 }
 
-/* .sub-menu-line {
-  border-top: 1px solid #2d3440;
-} */
-
-.nav-item {
-  display: inline-block;
-  padding: 0;
+.catalog-submenu-item {
+  margin: 0;
+  padding: 0;  
 }
 
-.nav-item a {
+.special {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 6px;
+  font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 700; 
+  font-size: 14px;
   line-height: 20px;
   color: #2d3440;
-  padding-top: 8px;
+}
+
+.special::after {
+  position: absolute;
+  content: "";
+  top: 43px;
+  left: 16px;
+  width: 116px;
+  height: 1px;
+  background-color: #b9b9b9;
+}
+
+.catalog-submenu-item {
+  padding-bottom: 6px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  padding-top: 6px;
   padding-right: 16px;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   padding-left: 16px;
-  /* outline: 5px solid green;
-  outline-offset: -5px;  */
 }
 
-.nav-item a.nav-phone-number:hover {
-  text-decoration: underline;
+.catalog-submenu-item:last-of-type {
+  padding-bottom: 0;
 }
 
-.nav-phone-number a {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2d3440;
+.catalog-submenu-item:hover {
+  background-color: #ffcbd8;
 }
+
+.catalog-submenu-item:active {
+  background-color: #ff7799;
+}
+
+.catalog-submenu-link {
+  color: #2d3440; 
+  text-decoration: none;
+}
+
+/* TODO Состояние элемента для выбранного раздела =>  background-color: #ff7799; color: #fcfcfc; */
+
+/* Правая часть навигации с попапами */
 
 .nav-user {
   padding: 0;
   margin: 0;
   min-width: 460px;
-  /* min-height: 104px;  */
   text-align: center;
+  margin-left: auto;
   /* outline: 5px solid black;
   outline-offset: -5px; */
-  margin-left: auto;
 }
 
 .nav-user-item {
   padding: 0;
   margin: 0;
+  /* outline: 5px solid green;
+  outline-offset: -5px;  */
+
 }
 
 .nav-user-item button {
   border: none;
   margin-right: 0;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: #2D3440;
   border: 2px solid transparent;
-  /* padding-top: 6px;
-  padding-right: 16px;
-  padding-bottom: 6px;
-  padding-left: 48px; */
 }
 
 /* ===> SECTION 1: SLIDERS <=== */
@@ -739,34 +762,30 @@ body.slider-three-background-yellow {
   outline-offset: -4px; */
 }
 
-/* ПРИВЕТ, КАТЯ */
-/* Если брать высоту и ширину в 12 пикселей, 
-то получается овал, а не круг, причину этого
-я не понял, так что поставил 14 пикселей */
-
 .slider-pagination-button {
-  width: 14px;
-  height: 14px;
-  border: 1px solid transparent;
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+  border: none;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%; 
   background-color: #feb7c9;
+  cursor: pointer;
 }
 
 .slider-pagination-button:hover {
-  background-color: #fec7d5;
-  border: 1px solid #fcfcfc;
+  box-shadow: 0 0 0 1px #000000;
+  outline: none;
 }
 
 .slider-pagination-button:focus {
-  background-color: #fec7d5;
-  border: 1px solid #2d3440;
+  box-shadow: 0 0 0 1px #000000;
+  outline: none;
 }
 
 .slider-pagination-button-current {
-  background-color: #fcfcfc;
-  border: 1px solid transparent;  
+  background-color: rgb(252, 252, 252);  
 }
 
 .social {
@@ -783,6 +802,48 @@ body.slider-three-background-yellow {
   margin-right: 8px;
   padding: 0;
 }
+
+
+.slider-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.slider-pagination-list {
+  display: flex;
+  justify-content: space-between;
+  width: 52px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+  background-color: #fec7d5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-pagination-button:hover {
+  box-shadow: 0 0 0 1px #000000;
+  outline: none;
+}
+
+.slider-pagination-button:focus {
+  box-shadow: 0 0 0 1px #000000;
+  outline: none;
+}
+
+.slider-pagination-button-current {
+  background-color: rgb(252, 252, 252);
+}
+
+
 
 .social-item {
   display: inline-block;
@@ -901,16 +962,15 @@ body.slider-three-background-yellow {
 .products {
   width: 1170px;
   min-width: 480px;
-  /* outline: 5px solid orange;
-  outline-offset: -5px; */
+  margin-bottom: 80px;
+  }
+  
 }
 
 .products-heading {
   padding: 0;
   margin: 0;
-  margin-bottom: 107px;
-  /* outline: 5px solid orange;
-  outline-offset: -5px; */
+  padding-bottom: 30px;
 }
 
 .product-card {
@@ -919,24 +979,22 @@ body.slider-three-background-yellow {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 270px;
   min-height: 281px;
   -webkit-border-radius: 8px 8px 8px 8px;
   -moz-border-radius: 8px 8px 8px 8px;
   border-radius: 8px 8px 8px 8px;
   margin-top: 80px;
-  /* outline: 5px solid blue;
-  outline-offset: -5px; */
+  padding-top: 0;
+  padding-right: 40px;
+  padding-bottom: 0;
+  padding-left: 40px;
 }
 
 .product-price-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  outline: 5px solid green;
-  outline-offset: -5px;
-  padding-right: 40px;
 }
 
 .product-card-button {
@@ -963,17 +1021,11 @@ body.slider-three-background-yellow {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  /* max-width: 190px; */
   padding: 0;
   margin: 0;
-  /* padding-left: 40px;
-  padding-right: 40px; */
-  padding:40px;
+  /* padding:40px; */
   padding-bottom: 0;
   padding-top: 0;
-  margin-bottom: 20px;
-  /* outline: 5px solid blue;
-  outline-offset: -5px; */
 }
 
 /* Title */
@@ -981,31 +1033,19 @@ body.slider-three-background-yellow {
   padding: 0;
   margin: 0;
   text-align: center;
-  /* margin-left: 10px;
-  margin-right: 10px; */
   font-weight: 700;
   color: #2d3440;
   font-size: 20px;
   line-height: 24px;
-  /* margin-top: 16px; */
   margin-bottom: 8px;
 }
 
-.product-card-description {
+.product-card-description { 
   padding: 0;
-}
-
-.product-card-price {
-  padding: 0;
-  /* margin-left: 40px; */
-  /* margin-right: 40px; */
-  margin-bottom: 20px;
 }
 
 .product-card-image {
   display: block;
-  margin-top: -70px;
-  margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
   -webkit-border-radius: 50%;
@@ -1020,16 +1060,13 @@ body.slider-three-background-yellow {
 }
 
 .product-card-image-link {
-  margin-top: 24px;
-  margin-bottom: 0;
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
+  margin-top: -50px;
+  margin-bottom: 16px;
 }
 
 /* Price */
 .product-card-price {
   padding: 0;
-  margin-left: 40px;
   margin-bottom: 28px;
   font-weight: 700;
   font-size: 20px;
@@ -1076,6 +1113,7 @@ body.slider-three-background-yellow {
   -moz-border-radius: 50%;
   border-radius: 50%;
   border: 2px solid #2d3440;
+  outline: none;
 }
 
 .icon-shopping-cart:disabled::before {
@@ -1682,107 +1720,55 @@ body.slider-three-background-yellow {
   margin:0;
 }
 
+/* Добавляем иконкам стили и прозрачность */
+
 .social-item-vk,
 .social-item-facebook,
 .social-item-instagram {
-  position: relative;
-  /* display: block; */
-}
-
-.social-item-vk::before {
-  position: absolute;
-  content: url("");
-  background-image: url("../images/icons/social-icon-vk.svg");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  border: 2px solid rgba(252, 252, 252, 0.2);
-  width: 24px;
-  height: 24px;
-  left:0;
-  top:0;
 }
 
-.social-item-facebook::before {
-  position: absolute;
-  content: url("");
-  background-image: url("../images/icons/social-icon-facebook.svg");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid rgba(252, 252, 252, 0.2);
-  width: 24px;
-  height: 24px;
-  left:0;
-  top:0;
+.social-item-vk:hover path,
+.social-item-facebook:hover path,
+.social-item-instagram:hover path {
+  fill: #000000;
 }
 
-.social-item-instagram::before {
-  position: absolute;
-  content: url("");
-  background-image: url("../images/icons/social-icon-instagram.svg");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid rgba(252, 252, 252, 0.2);
-  width: 24px;
-  height: 24px;
-  left:0;
-  top:0;
+.social-item-vk:hover,
+.social-item-facebook:hover,
+.social-item-instagram:hover {
+  background-color: #ffffff;
 }
 
-.social-item-instagram::before {
-  position: absolute;
-  content: url("");
-  background-image: url("../images/icons/social-icon-instagram.svg");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid rgba(252, 252, 252, 0.2);
-  width: 24px;
-  height: 24px;
-  left:0;
-  top:0;
+/* TODO Решить с цветом фокуса - делать синим или черным.  */
+.social-item-vk:focus,
+.social-item-facebook:focus,
+.social-item-instagram:focus {
+  border: 2px solid #000000;
+  box-shadow: inset 0 0 0 2px #000000;
+  outline: none;
 }
 
-.social-item-vk:hover::before,
-.social-item-facebook:hover::before,
-.social-item-instagram:hover::before {
+/* .social-item-vk:hover,
+.social-item-facebook:hover,
+.social-item-instagram:hover {
   background-color: #2d3440;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
+} */
 
-.social-item-vk:focus::before,
-.social-item-facebook:focus::before,
-.social-item-instagram:focus::before {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid #2d3440;
-  background-color: #2d3440;
-}
-/* .social-wrapper {
+.social-wrapper {
   display: block;
-  width: 140px; */
+  width: 140px;
   /* outline: 5px solid black;
-  outline-offset: -5px; */
+  outline-offset: -5px;  */
 }
 
-.footer-menu-wrapper {
+/* .footer-menu-wrapper {
   padding: 0;
   margin: 0;
   width: 360px;
@@ -1792,8 +1778,12 @@ body.slider-three-background-yellow {
   justify-content: space-around;
   flex-wrap: wrap;
   margin-left: 299px;
-  /* outline: 5px solid blue;
-  outline-offset: -5px; */
+  outline: 5px solid blue;
+  outline-offset: -5px;
+} */
+
+.social-item:last-of-type {
+margin-right: 10px;
 }
 
 .with-love {
@@ -1961,6 +1951,29 @@ a.current {
   left: 25%;
 } */
 
+.breadcrumbs-arrow {
+  position: relative;
+  display: inline;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: rgb(45, 52, 64);
+}
+
+.breadcrumbs-arrow::after {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  right: -20px;
+  content: "";
+  background-image: url("../images/icons/icon-chevrons-right.svg");
+}
+
+.breadcrumbs-arrow:last-child .breadcrumbs-link::after {
+  background: none;
+}
+
 .current-link {
   text-decoration: none;
 }
@@ -1978,7 +1991,6 @@ a.current {
 
 
 /* ===> SECTION: PRODUCTS <=== */
-
 
 /* Вариант на FLEXах */
 
@@ -2339,7 +2351,8 @@ a.current {
   min-height: 126px; 
   display: flex;
   flex-direction: row-reverse;
-  align-content: center;
+  /* align-content: center; */
+  align-items: baseline;
   margin-top: 16px;
   padding-top: 41px;
   padding-bottom: 41px;
@@ -2362,10 +2375,13 @@ a.current {
   outline-offset: -5px; */
 }
 
-.pagination {
+.pagination-list {
   padding: 0;
   margin: 0;
-}
+  display: flex;
+  align-items: center;
+  /* margin-left: auto; */
+ }
 
 .pagination-item {
   padding: 0;
@@ -2377,32 +2393,62 @@ a.current {
 .pagination-item:nth-child(6) {
   margin: 0;
   padding: 0;
-  /* outline: 5px solid red;
+  /* outline: 5px solid green;
   outline-offset: -5px; */
-
 }
 
 .pagination-link {
-  margin: 0;
-  padding: 0;
   display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  color: rgb(45, 52, 64);
   color: #2d3440;
   text-decoration: none;
+  width: 24px;
+  height: 24px; 
+  border-radius: 50%;
+  padding-top: 2px;
+}
+
+.pagination-link:hover {
+  background-color: #fdceda;
 }
 
 .pagination-current {
   margin: 0;
   padding: 0;
+  display: block;
   width: 24px;
   height: 24px;
   border: none;
   border-radius: 50px;
   background-color: #fcfcfc;
   text-align: center;
+  margin-right: 8px;
+}
+
+.pagination-prev {
+  margin-right: 8px;
+  background: url("../images/icons/icon-arrow-left.svg") no-repeat center;
+  opacity: 0.5;
+}
+
+.pagination-prev:focus {
+  box-shadow: 0 0 0 4px #000000;
+  outline: none;
+}
+
+.pagination-next {
+  margin-left: 24px;
+  background: url("../images/icons/icon-arrow-right.svg") no-repeat center;
+}
+
+.pagination-next:focus {
+  box-shadow: 0 0 0 2px #000000;
+  outline: none;
 }
 
 
@@ -2469,6 +2515,7 @@ a.current {
   color: #2d3440;
   border: 2px solid #2d3440;
   text-decoration: none;
+  outline: none;
 }
 
 .button-white:disabled {
@@ -2511,6 +2558,7 @@ a.current {
   background-color: #ff2f64;
   color: #fcfcfc;
   border: 4px solid #2d3440;
+  outline: none;
 }
 
 .button-red:disabled {
@@ -2563,6 +2611,7 @@ a.current {
   color: #2d3440;
   text-decoration: none;
   border: 2px solid #2d3440;
+  outline: none;
 }
 
 .button-pink:disabled {
@@ -2599,9 +2648,11 @@ a.current {
 }
 
 .popover-search{
+  position: absolute;
+  right: 0;
+  top: 0;
   margin: 0;
   padding: 0;
-  position: absolute;
   box-sizing: border-box;
   min-width: 356px;
   max-height: 96px;
@@ -2621,6 +2672,22 @@ a.current {
   outline-offset: -5px; */
 }
 
+.nav-search:hover .popover-search {
+  display: block;
+}
+
+.form-field {
+  color: rgba(185, 185, 185, 1); /* #b9b9b9; */
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  background: #ffffff;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
 /* Поповер для входа */
 
 .nav-customer-login {
@@ -2631,24 +2698,23 @@ a.current {
   margin: 0;
   padding: 0;
   position: absolute;
-  box-sizing: border-box;
-  min-width: 420px;
-  min-height: 350px;
-  background: #fcfcfc;
-  border-radius: 4px;
+  top: 35px;
+  right: 0px;
   z-index: 3;
+  min-width: 420px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
   margin-top: 8px;
   padding-top: 48px;
   padding-right: 48px;
   padding-bottom: 52px;
-  padding-left: 48px;
-  top: 35px;
-  right: 0px;
+  padding-left: 48px; 
   color: rgba(45, 52, 64, 1);
-  background-color: #FFFFFF;
   display: none;
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
+}
+
+.nav-user-item:hover .popover-customer {
+  display: block;
 }
 
 .popover-login-input {
@@ -2661,6 +2727,12 @@ a.current {
 .popover-customer-heading {
   margin-bottom: 32px;
   text-align: left;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2D3440;
 }
 
 .popover-customer-login-wrapper {
@@ -2678,14 +2750,20 @@ a.current {
   outline-offset: -5px; */
 }
 
-.popover-login {
+.popover-login-button {
   padding: 0;
   margin: 0;
-  background: #FF2F64;
+  width: 113px;
+  height: 44px;
+  background: #ff2f64;
   border: 4px solid rgba(255, 47, 100, 0.3);
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
-  font-family: inherit;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -2694,12 +2772,33 @@ a.current {
   color: #fcfcfc;
 }
 
+.popover-login-button:hover {
+  background-color: #fcfcfc;
+  border-color: #ff2f64;
+  color: #2d3440;
+  box-shadow: none;
+}
+
+.popover-login-button:focus {
+  border-color: #ff2f64;
+  box-shadow: 0 0 0 2px #000000;
+  outline: none;
+}
+
+.popover-login-button:active {
+  background-color: #b9b9b9;
+  border-color: #e8e8e8;
+  color: #565c66;
+  box-shadow: none;
+}
+
 .recovery-list {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
   text-decoration: underline;
   text-align: left;
-  padding: 0;
-  margin: 0;
+  margin-left: 23px;
 }
 
 /* .popover-customer-recovery-wrapper {
@@ -2713,7 +2812,7 @@ a.current {
 .auth-form-recovery,
 .auth-form-register {
   text-decoration: underline;
-  font-family: inherit;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #2d3440;
@@ -2727,44 +2826,39 @@ a.current {
   position: relative;
 }
 
-.popover-empty{
+.popover-cart-empty{
   position: absolute;
-  box-sizing: border-box;
   min-width: 288px;
   min-height: 156px;
   z-index: 3;
-  padding: 0;
-  margin: 0;
   margin-top: 8px;
   padding: 48px;
   top: 40px;
   right: 0;
   color: #242424;
-  background-color: #FFFFFF;
+  background-color: #fcfcfc;
+  border-radius: 4px;
   display: none;
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
 }
 
 .popover-content {
   height: 100%;
 }
 
-.popover-cart-empty {
-  width: 288px;
-}
-
-
 .popover-title-empty { 
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
-  color: #2D3440;
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
+  color: #2d3440;
+}
+
+.nav-basket:hover .popover-cart-empty {
+  display: block;
 }
 
 
@@ -2889,7 +2983,6 @@ a.current {
 
 .modal-auth {
   max-width: 570px;
-  /* max-height: 545px; */
   background: #fcfcfc;  
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
@@ -2916,12 +3009,18 @@ a.current {
   cursor: pointer;
 } 
 
+/* Привет Катя. Почему-то не закрывается модальное окно */
+.modal-close-button:hover .modal-container {
+  display: none;
+} 
+
+
 .modal-title {
   margin: 0;
   padding: 0;
   margin-bottom: 32px;
   min-width: 369px;
-  font-family: inherit;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -2931,15 +3030,15 @@ a.current {
 }
 
 .textform {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #b9b9b9;
   height: 149px;
-  /* outline: 5px solid yellow;
-  outline-offset: -5px; */
+  border: 1px solid #b9b9b9;
+  border-radius: 4px;
 }
 
 .field-group {
