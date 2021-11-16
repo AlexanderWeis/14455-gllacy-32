@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Заготовка для фавикона -->
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.svg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.svg">
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
@@ -32,96 +32,139 @@
           <img src="images/logos/logo-gllacy.svg" alt="Логотип фирмы GllacyShop – натуральное мороженное для всех"
             width="137" height="56"></a>
       </div>
-
       <nav class="nav">
         <div class="nav-menu">
           <ul class="nav-list">
-            <li class="nav-item">
-              <a href="catalog.html" class="current">
-                Каталог
-              </a>
+            <li class="nav-item catalog-menu">
+              <a class="nav-link current" href="#">Каталог</a>
+              <ul class="catalog-submenu">
+                <li class="catalog-submenu-item special"><a class="catalog-submenu-link"
+                    href="#"><strong>Новинки</strong></a></li>
+                <li class="catalog-submenu-item"><a class="catalog-submenu-link" href="catalog.html">Сливочное</a></li>
+                <li class="catalog-submenu-item"><a class="catalog-submenu-link" href="">Щербеты</a></li>
+                <li class="catalog-submenu-item"><a class="catalog-submenu-link" href="">Фруктовый лед</a></li>
+                <li class="catalog-submenu-item"><a class="catalog-submenu-link" href="">Мелорин</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a href="#">
-                Доставка и оплата
-              </a>
+              <a class="nav-link" href="#">Доставка и оплата</a>
             </li>
             <li class="nav-item">
-              <a href="#">
-                О компании
-              </a>
+              <a class="nav-link" href="#">О компании</a>
             </li>
           </ul>
         </div>
-
         <div class="nav-user">
           <ul class="nav-list">
+
             <li class="nav-item nav-user-item nav-telefon">
-              <a class="nav-phone-number-test nav-tel" href="tel:+79876543210">
+              <a class="nav-phone-number nav-tel" href="tel:+79876543210">
                 +7 800 555-86-28
               </a>
             </li>
+
             <li class="nav-item nav-user-item">
               <button type="button" class="button-circle button-pink nav-search">
                 <span class="visually-hidden">
                   Поиск
                 </span>
+                <!-- ПОПОВЕР для поиска -->
+                <div class="popover-search">
+                  <form class="search-engine" action="https://echo.htmlacademy.ru/" method="get">
+                    <p class="field-group">
+                      <label class="visually-hidden" for="your-name">Поисковый запрос</label>
+                      <input class="form-field field" type="search" id="your-search" name="your-search"
+                        placeholder="Поиск по сайту">
+                    </p>
+                  </form>
+                </div>
               </button>
             </li>
+
             <li class="nav-item nav-user-item">
-              <button type="button" class="button button-pink nav-customer-login">
-                Вход
+              <button type="button" class="button button-pink nav-customer-login">Вход
+
               </button>
+
+              <!-- ПОПОВЕР для входа -->
+              <div class="popover-customer popover-customer-login">
+
+                <div class="popover-customer-underlay">
+                  <h2 class="popover-customer-heading">Личный кабинет</h2>
+                  <div class="popover-customer-form-wrapper">
+
+                    <form class="popover-customer-form" action="https://echo.htmlacademy.ru">
+
+                      <p class="field-group popover-customer-email">
+                        <label class="visually-hidden form-label" for="popover-customer-email">Электропочта</label>
+                        <input class="popover-login-input" type="email" id="popover-customer-email"
+                          name="popover-customer-email" placeholder="email@example.com" required>
+                      </p>
+
+                      <p class="field-group popover-customer-password">
+                        <label class="visually-hidden form-label" for="popover-customer-password">Пароль</label>
+                        <input class="popover-login-input" type="password" id="popover-customer-password"
+                          name="popover-customer-password" placeholder="Введите пароль" minlength="7" required>
+                      </p>
+
+                      <div class="popover-customer-login-wrapper">
+                        <button class="popover-login-button" type="submit">Войти</button>
+                        <div class="popover-customer-recovery-wrapper">
+                          <ul class="recovery-list">
+                            <li class="recovery-item"><a class="auth-form-recovery" href="#">Забыли пароль?</a></li>
+                            <li class="recovery-item"><a class="auth-form-register" href="#">Регистрация</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </li>
+
             <li class="nav-item nav-user-item">
               <button type="button" class="button button-pink nav-basket-full">
                 2 товара
               </button>
               <!-- ПОПОВЕР для полной корзины -->
-          <!-- <div class="popover-full popover-cart">
-            <button class="popover-close-button button button-light">
-              2
-              <span class="visually-hidden">Закрыть</span>
-            </button>
+              <div class="popover-full popover-cart">
+                <button class="popover-close-button button button-light">2
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
 
-            <div class="popover-content">
-              <h2 class="popover-title">Корзина</h2>
-              <ul class="cart-items-list">
-                <li class="cart-item">
-                  <img src="" alt="Мороженное 'Малинка'" width="46" height="46">
-                  <p class="cart-item-title">Малинка</p>
-                  <p class="cart-item-title-subline">1 кг х 310 ₽</p>
-                  <p class="cart-item-price">310 ₽</p>
-                  <button type="button" class="cart-item-button button">
-                    <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
-                    </svg>
-                    <span class="visually-hidden">Удалить из корзины</span>
-                  </button>
-                </li>
-                <li class="cart-item">
-                  <img src="" alt="Мороженное 'Малинка'" width="46" height="46">
-                  <p class="cart-item-title">Бабл-гам</p>
-                  <p class="cart-item-title-subline">1 кг х 310 ₽</p>
-                  <p class="cart-item-price">480 ₽</p>
-                  <button class="cart-item-button button" type="button">
-                    <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
-                    </svg>
-                    <span class="visually-hidden">Удалить из корзины</span>
-                  </button>
-                </li>
-              </ul>
-              <div class="order-area">
-                <button class="delivery-submit button button-red" type="submit">Оформить заказ</button>
-                <p class="cart-item-sum">Итого: 790 ₽</p>
+                <div class="popover-content">
+                  <h2 class="popover-title">Корзина</h2>
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <img src="images/products/product-caspberry-1.jpg" alt="Мороженное 'Малинка'" width="46" height="46">
+                      <div class="cart-item-full-info">
+                        <p class="cart-item-title">Малинка</p>
+                        <p class="cart-item-title-subline">1 кг х 310 ₽</p>
+                      </div>
+                      <p class="cart-item-price">310 ₽</p>
+                      <button type="button" class="cart-item-button button">
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                    <!-- <li class="cart-item">
+                      <img src="images/products/product-caspberry-1.jpg" alt="Мороженное 'Малинка'" width="46" height="46">
+                      <p class="cart-item-title">Бабл-гам</p>
+                      <p class="cart-item-title-subline">1 кг х 310 ₽</p>
+                      <p class="cart-item-price">480 ₽</p>
+                      <button type="button" class="cart-item-button button">
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li> -->
+                  </ul>
+                  <!-- <div class="order-area">
+                    <a class="delivery-submit button button-red busket-submit">Оформить заказ</a>
+                    <p class="cart-item-sum">Итого: 790 ₽</p> 
+                  </div> -->
+                </div>
               </div>
-            </div>
-        </div> -->
             </li>
           </ul>
         </div>
-
       </nav>
     </div>
 
@@ -151,7 +194,7 @@
 
     <!-- Секция 2: Фильтрация продуктов -->
 
-    <section class="catalog-products">
+    <!-- <section class="catalog-products">
       <h2 class="visually-hidden">Список товаров с фильтрами</h2>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
@@ -173,13 +216,13 @@
               <button class="range-toggle toggle-max" type="button">
                 <span class="visually-hidden">Изменить максимальную цену.</span>
               </button>
-            <label class="catalog-filter-label">
-              Цена: <input class="catalog-filter-input" type="number" name="min-price"> 100 ₽
-            </label>
-            <label class="catalog-filter-label">
-              – <input class="catalog-filter-input" type="number" name="max-price"> 500 ₽
-            </label>
-          </div>
+              <label class="catalog-filter-label">
+                Цена: <input class="catalog-filter-input" type="number" name="min-price"> 100 ₽
+              </label>
+              <label class="catalog-filter-label">
+                – <input class="catalog-filter-input" type="number" name="max-price"> 500 ₽
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="catalog-filter-group">
@@ -296,225 +339,322 @@
         </div>
 
       </form>
-    </section>
+    </section> -->
 
     <!-- Секция 3: Продуктовая секция -->
 
-<!-- Список товаров -->
-<section class="glassy-products">
+    <!-- Список товаров -->
+    <section class="glassy-products">
 
-  <ul class="product-list">
-    
-    <!-- Первый ряд -->
+      <ul class="product-list">
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-caspberry-1.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Малинка</h3>
-        </a>
-        <p class="product-card-description">Сливочное мороженое с&nbsp;малиновым джемом</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+        <!-- Первый ряд -->
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-pistachio-2.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Фисташка</h3>
-        </a>
-        <p class="product-card-description">Фисташковый пломбир с&nbsp;кусочками шоколада</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
-
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-blackberry-3.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Черника</h3>
-        </a>
-        <p class="product-card-description">Крем-брюле с&nbsp;черничным джемом</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
-
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-bubblegum-4.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Бабл-гам</h3>
-        </a>
-        <p class="product-card-description">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
-    
-    <!-- Второй ряд -->
-
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-jewel-5.jpg" alt="Сорт мороженного" width="168"
-              height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Ежевика</h3>
-        </a>
-        <p class="product-card-description">Сливочное мороженое&nbsp;с ежевичным джемом</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
-
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-banana-6.jpg" alt="Сорт мороженного"
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-caspberry-1.jpg" alt="Сорт мороженного"
               width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Банан</h3>
-        </a>
-        <p class="product-card-description">Сливочный пломбир&nbsp;с банановым вкусом</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Малинка</h3>
+            </a>
+            <p class="product-card-description">Сливочное мороженое с&nbsp;малиновым джемом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">310 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-chocolate-7.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Шоколадка</h3>
-        </a>
-        <p class="product-card-description">Классический&nbsp;шоколадный пломбир</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-pistachio-2.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Фисташка</h3>
+            </a>
+            <p class="product-card-description">Фисташковый пломбир с&nbsp;кусочками шоколада</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">340 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-strawberry-8.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Клубничка</h3>
-        </a>
-        <p class="product-card-description">Сливочный пломбир&nbsp;с клубничным вкусом</p>
-      </div>
-      <span class="product-card-price">310 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
-    
-    <!-- Третий ряд -->
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-blackberry-3.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Черника</h3>
+            </a>
+            <p class="product-card-description">Крем-брюле с&nbsp;черничным джемом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">330 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-lemon-9.jpg" alt="Сорт мороженного" width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Лимон</h3>
-        </a>
-        <p class="product-card-description">Освежающий&nbsp;лимонный сорбет</p>
-      </div>
-      <span class="product-card-price">330 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-bubblegum-4.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Бабл-гам</h3>
+            </a>
+            <p class="product-card-description">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">320 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-menthol-10.jpg" alt="Сорт мороженного"
-          width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Ментол</h3>
-        </a>
-        <p class="product-card-description">Сливочный пломбир&nbsp;с ментоловым сиропом</p>
-      </div>
-      <span class="product-card-price">320 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+        <!-- Второй ряд -->
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-nut-11.jpg" alt="Сорт мороженного" width="168"
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-jewel-5.jpg" alt="Сорт мороженного" width="168"
               height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Орешек</h3>
-        </a>
-        <p class="product-card-description">Фисташковый пломбир&nbsp;с шоколадным сиропом</p>
-      </div>
-      <span class="product-card-price">360 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Ежевика</h3>
+            </a>
+            <p class="product-card-description">Сливочное мороженое с&nbsp;ежевичным джемом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">330 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
 
-    <li class="product-card">
-      <a class="product-card-image-link" href="catalog.html">
-        <img class="product-card-image" src="images/products/product-cream-brulee-12.jpg" alt="Сорт мороженного"
-        width="168" height="168">
-      </a>
-      <div class="product-card-content">
-        <a class="product-card-title-link" href="#">
-          <h3 class="product-card-title">Крем-брюле</h3>
-        </a>
-        <p class="product-card-description">Классическое&nbsp;крем-брюле </p>
-      </div>
-      <span class="product-card-price">280 ₽/кг</span>
-      <a class="button product-card-button icon-shopping-cart" href="#">
-        <span class="visually-hidden">Купить мороженное</span>
-      </a>
-    </li>
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-banana-6.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Банан</h3>
+            </a>
+            <p class="product-card-description">Сливочный пломбир с&nbsp;банановым вкусом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">340 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
 
-  </ul>
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-chocolate-7.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Шоколадка</h3>
+            </a>
+            <p class="product-card-description">Классический шоколадный&nbsp;пломбир</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">270 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-strawberry-8.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Клубничка</h3>
+            </a>
+            <p class="product-card-description">Сливочный пломбир с&nbsp;клубничным вкусом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">300 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+        <!-- Третий ряд -->
+
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-lemon-9.jpg" alt="Сорт мороженного" width="168"
+              height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Лимон</h3>
+            </a>
+            <p class="product-card-description">Освежающий лимонный&nbsp;сорбет</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">310 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-menthol-10.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Ментол</h3>
+            </a>
+            <p class="product-card-description">Сливочный пломбир с&nbsp;ментоловым сиропом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">320 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-nut-11.jpg" alt="Сорт мороженного" width="168"
+              height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Орешек</h3>
+            </a>
+            <p class="product-card-description">Фисташковый пломбир с&nbsp;шоколадным сиропом</p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">360 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a class="product-card-image-link" href="catalog.html">
+            <img class="product-card-image" src="images/products/product-cream-brulee-12.jpg" alt="Сорт мороженного"
+              width="168" height="168">
+          </a>
+          <div class="product-card-content">
+            <a class="product-card-title-link" href="#">
+              <h3 class="product-card-title">Крем-брюле</h3>
+            </a>
+            <p class="product-card-description">Классическое крем-брюле </p>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-card-price">280 &#8381;/кг</span>
+            <button type="button" class="product-card-button">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="shopping-cart-full" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
+                  fill="#fcfcfc" />
+              </svg>
+              <span class="visually-hidden">Купить мороженное</span>
+            </button>
+          </div>
+        </li>
+
+      </ul>
 
 
     </section>
