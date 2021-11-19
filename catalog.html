@@ -185,7 +185,7 @@
           <a class="current-link">Сливочное</a>
         </li>
       </ul>
-      <h2 class="catalog-product-title">Сливочное мороженное</h2>
+      <h2 class="catalog-product-title">Сливочное мороженое</h2>
     </section>
 
     <!-- Секция 2: Фильтрация продуктов -->
@@ -211,7 +211,7 @@
             <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
             <div class="range">
               <div class="range-scale">
-                <div class="range-bar" style="left: 42px; width: 136px">
+                <div class="range-bar">
                   <button class="range-toggle toggle-min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
@@ -233,35 +233,35 @@
           
           <!-- Radio-buttons  -->
           
-          <fieldset class="catalog-filter-group filter-radio-buttons">
+          <fieldset class="catalog-filter-group filter-radio-buttons-wrapper"> 
             <legend class="catalog-filter-title">Жирность:</legend>
-            <div class="filter-background">
-              <ul class="catalog-filter-list item-position">
+            <div class="filter-background"> 
+              <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input-radio" type="radio" name="fatness" value="0%">
-                    <span class="control-mark-radio-button"></span>
+                  <label class="check option">
+                    <input class="visually-hidden check-input" type="radio" name="fatness" value="до 10%">
+                    <span class="check-radio-button"></span>
                     <span class="control-label-radio">0%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input-radio" type="radio" name="fatness" value="до 10%" checked>
-                    <span class="control-mark-radio-button"></span>
+                  <label class="check option">
+                    <input class="visually-hidden check-input" type="radio" name="fatness" value="до 10%" checked>
+                    <span class="check-radio-button"></span>
                     <span class="control-label-radio">до 10%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input-radio" type="radio" name="fatness" value="до 30%">
-                    <span class="control-mark-radio-button"></span>
+                  <label class="check option">
+                    <input class="visually-hidden check-input" type="radio" name="fatness" value="до 30%" disabled>
+                    <span class="check-radio-button"></span>
                     <span class="control-label-radio">до 30%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input-radio" type="radio" name="fatness" value="выше 30%">
-                    <span class="control-mark-radio-button"></span>
+                  <label class="check option">
+                    <input class="visually-hidden check-input" type="radio" name="fatness" value="выше 30%" checked disabled>
+                    <span class="check-radio-button"></span>
                     <span class="control-label-radio">выше 30%</span>
                   </label>
                 </li>
@@ -271,48 +271,48 @@
 
         <!-- Checkboxes  -->
 
-          <fieldset class="catalog-filter-group filter-checkboxes">
-            <legend class="catalog-filter-title">Наполнители</legend>
-            <div class="filter-background">
-              <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
-                    <span class="control-mark-checkbox"></span>
-                    <span class="control-label">шоколадные</span>
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="sugar-powders" checked>
-                    <span class="control-mark-checkbox"></span>
-                    <span class="control-label">сахарные присыпки</span>
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="fruits">
-                    <span class="control-mark-checkbox"></span>
-                    <span class="control-label">фрукты</span>
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="syrups">
-                    <span class="control-mark-checkbox"></span>
-                    <span class="control-label">сиропы</span>
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="visually-hidden control-input" type="checkbox" name="jams">
-                    <span class="control-mark-checkbox"></span>
-                    <span class="control-label">джемы</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
+        <fieldset class="catalog-filter-group filter-checkboxes">
+          <legend class="catalog-filter-title">Наполнители</legend>
+          <div class="filter-background">
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="check option">
+                  <input class="check-input" type="checkbox" name="chocolate">
+                  <span class="check-box"></span>
+                  <span class="control-label">шоколадные</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="check option">
+                  <input class="check-input" type="checkbox" name="sugar-powders" checked>
+                  <span class="check-box"></span>
+                  <span class="control-label">сахарные присыпки</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="check option">
+                  <input class="check-input" type="checkbox" name="fruits" disabled>
+                  <span class="check-box"></span>
+                  <span class="control-label">фрукты</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="check option">
+                  <input class="check-input" type="checkbox" name="syrups" checked disabled>
+                  <span class="check-box"></span>
+                  <span class="control-label">сиропы</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="check option">
+                  <input class="check-input" type="checkbox" name="jams">
+                  <span class="check-box"></span>
+                  <span class="control-label">джемы</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
           <div class="filtering-button-wrapper">
             <button class="filter-button" type="submit">
               Применить

@@ -348,7 +348,9 @@ body.slider-three-background-yellow {
   background-color: #fcfcfc;
   color: #2d3440;
   text-decoration: none;
-  border: 4px solid #f4c9d4;
+  /* border: 4px solid #f4c9d4; */
+  box-shadow: 0 0 0 4px #f4c9d4;
+  outline: none;
   text-align: center;
   font-style: normal;
   font-weight: 700;
@@ -363,22 +365,27 @@ body.slider-three-background-yellow {
 .button-white:hover {
   background-color: #f3cad5;
   color: #fcfcfc;
-  border: 4px solid #ffffff;
+  /* border: 4px solid #ffffff; */
+  box-shadow: 0 0 0 4px #ffffff;
+  outline: none;
   text-decoration: none;
 }
 
 .button-white:focus {
   background-color: #fcfcfc;
   color: #2d3440;
-  border: 2px solid #2d3440;
-  text-decoration: none;
+  /* border: 2px solid #2d3440; */
+  box-shadow: 0 0 0 2px #2d3440;
   outline: none;
+  text-decoration: none;
 }
 
 .button-white:disabled {
   background-color: #e7e7e7;
   color: #b9b9b9;
-  border: 4px solid #f4c9d4;
+  /* border: 4px solid #f4c9d4; */
+  box-shadow: 0 0 0 4px #f4c9d4;
+  outline: none;
   text-decoration: none;
 }
 
@@ -763,27 +770,38 @@ body.slider-three-background-yellow {
   display: block;
 }
 
+.slider__description {
+  flex-grow: 1;
+}
+
 .all-slider-images {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  width: 50%;
+  /* width: 50%; */
   margin: 0;
   padding: 0;
-  /* outline: 5px solid yellow;
+  /* outline: 5px solid green;
   outline-offset: -5px; */
 }
 
 .slider-image {
-  position: relative;
-  width: 20%;
+  /* position: relative; */
   order: 3;
   opacity: 0.4;
+  width: 100px;
+  margin-left: 41px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-left: 5px;
+  /* outline: 5px solid yellow;
+  outline-offset: -5px; */
 }
 
 .slider-image.active {
   position: relative;
-  width: 50%;
+  width: 306px;
+  margin-right: 41px; 
   order: 1;
   opacity: 1;
 }
@@ -851,7 +869,6 @@ body.slider-three-background-yellow {
 }
 
 .big-circle {
-  position: relative;
   padding: 0;
   margin: 0;
 }
@@ -880,14 +897,22 @@ body.slider-three-background-yellow {
   display: flex;
   justify-content: space-between;
   height: 38px;
-  left: -10px;
   right: 0;
   bottom: 0;
   top: 0;
-  margin: auto -19px;
+  left: 0;
+  width: 349px;
+  margin: auto -33px;
   z-index: 1;
   /* outline: 5px solid red;
   outline-offset: -5px; */
+}
+/* Стрелочки (svg) внутри кнопок */
+
+button.button-slider svg {
+  position: absolute;
+  top: 9px;
+  left: 8px;
 }
 
 .button-slider {
@@ -955,8 +980,6 @@ body.slider-three-background-yellow {
 
 .small-circle {
   position: relative;
-  padding: 0;
-  margin: 0;
 }
 
 .small-circle:last-child {
@@ -966,7 +989,7 @@ body.slider-three-background-yellow {
 .small-circle::before {
   position: absolute;
   content: "";
-  left: 8px;
+  left: 0;
   top: 50%;
   display: block;
   width: 100px;
@@ -1660,7 +1683,7 @@ body.slider-three-background-yellow {
   justify-self: start;
 } */
 
-/* ===> SECTION 6: DELIVERY <=== */
+/* ! ===> SECTION 6: DELIVERY <=== */
 
 .delivery {
   width: 1170px;
@@ -1725,10 +1748,6 @@ body.slider-three-background-yellow {
 
 /* Forms with GRID */
 
-/* Привет, Катя.
-Кнопка должна находится на расстояние 32px от инпутов, но так как
-я использую гриды и свойства gap, то между инпутами и кнопкой лишь 20 пикселей.
-Как оптимальнее всего решить вопрос? */
 
 .delivery-form {
   display: grid;
@@ -1738,7 +1757,6 @@ body.slider-three-background-yellow {
   /* outline: 5px solid green;
   outline-offset: -5px; */
 }
-
 
 .delivery-form .icon-info {
   display: none;
@@ -1850,7 +1868,51 @@ body.slider-three-background-yellow {
   left: 0px;
 } 
 
-/* ===> SECTION 7: Contacs <=== */
+/* Tooltips */
+
+.tooltip {
+  position: absolute;
+  top: -23px;
+  left: 28px;
+  z-index: 1;
+  display: none;
+  min-width: 205px;
+  text-align: left;
+  color: #565c66;
+  background-color: #fcfcfc;
+  border: 2px solid #B9B9B9;
+  border-radius: 5px;
+}
+
+.tooltip::after {
+  position: absolute;
+  top: 11px;
+  left: -9px;
+  z-index: -1;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #fcfcfc;
+  border-left: 2px solid #B9B9B9;
+  border-top: 2px solid #B9B9B9;
+  transform: rotate(-45deg);
+  content: "";
+}
+
+.tooltip-text {
+  margin: 0;
+  padding: 10px 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.icon-information:hover .tooltip {
+  display: block;
+}
+
+/* ! ===> SECTION 7: Contacs <=== */
 
 .contacts {
   width: 1170px;
@@ -2293,7 +2355,9 @@ margin-right: 10px;
   margin: 0;
   padding: 0;
   border: none;
-  margin-right: 24px;
+  margin-right: 24px; /*TODO проверить*/
+  /* outline: 5px solid red;
+  outline-offset: -5px; */
 }
 
 .catalog-filter-title {
@@ -2304,9 +2368,12 @@ margin-right: 10px;
   font-size: 14px;
   line-height: 20px;
   color: #2d3440;
-
   /* outline: 5px solid red;
   outline-offset: -5px; */
+}
+
+.catalog-filter-title:nth-child() {
+  margin-top: 16px; 
 }
 
 /* Dropdown menu with elements */
@@ -2356,25 +2423,40 @@ margin-right: 10px;
   width: 196px;
 }
 
-/* Range */
-.range-scale { /* Снаружи диапазона */
+.range {
+  width: 196px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-top: 18px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+}
+
+/* Снаружи диапазона */
+.range-scale { 
   position: relative;
   height: 2px;
-  background-color: rgba(86, 92, 102, 1);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 2px;
 }
 
-.range-bar { /* Внутри диапазона */
+/* Внутри диапазона */
+.range-bar { 
   position: absolute;
   height: 2px;
-  background-color: red;
+  background-color: #565c66;
+  top: 0;
+  left: 42px; 
+  width: 56px;
 }
 
 .range-toggle {
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #FFFFFF;
+  background: #fcfcfc;
   border: 2px solid #2d3440;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -2382,23 +2464,55 @@ margin-right: 10px;
   cursor: pointer;
 }
 
-.range-toggle:hover {
-  background-color: green;
+.range-toggle::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #fcfcfc;
+  border-radius: 50%;
 }
 
-.range-toggle:active,
-.range-toggle:focus {
-  outline: 3px solid green;
-} 
+.range-toggle:hover {
+  background-color: #fcfcfc;
+  border-color: #fcfcfcf;
+}
 
+.range-toggle:hover::after {
+  background-color: #2d3440;
+}
+
+.range-toggle:focus {
+  outline: none;
+  background-color: #fcfcfc;
+  border-color: #2d3440;
+}
+
+.range-toggle:focus .range-toggle::after {
+  background-color: #2d3440;
+}
+
+.range-toggle:active {
+  background-color: #2d3440;
+}
+
+.range-toggle:active .range-toggle::after {
+  background-color: #2d3440;
+}
+
+/* Ползунки */
 .toggle-min {
   top: -8px;
-  left: -10px;
+  left: -18px;
+  background-color: #2d3440;
+  border: none;
 }
 
 .toggle-max {
   top: -8px;
-  right: 50px;
+  right: 0;
+  background-color: #2d3440;
+  border: none;
 }
 
 .range-wrapper-inputs {
@@ -2423,48 +2537,35 @@ margin-right: 10px;
   appearance: textfield;
 }
 
+/* отключаем стрелки у input */
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
-/* Radio Button */
+/* Оформление для чекбоксов и радиокнопок  */
 
-.control-input-radio:checked + .control-label-radio {
-  background-image: url("../img/icons/radio-on.svg");
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #2d3440;
 }
 
-/* Focused */
-
-.control-input-radio:focus + .control-label-radio {
-  background-image: url("../images/icons/icon-radio-button-off-svg");
-}
-
-.control-input-radio:checked:focus + .control-label-radio {
-  background-image: url("../images/icons/icon-radio-button-on.svg");
-}
-
-/* Hovered */
-
-.control-input-radio:hover + .control-label-radio {
-  background-image: url("../images/icons/icon-radio-button-off-svg");
-}
-
-.control-input-radio:checked:hover + .control-label-radio {
-  background-image: url("../images/icons/icon-radio-button-on.svg");
-}
-
-.control-input-radio:disabled + .control-label-radio {
-  background-image: url("../img/icons/radio-off-disabled.svg");
-}
-
-.control-input-radio:checked:disabled + .control-label-radio {
-  background-image: url("../img/icons/radio-on-disabled.svg");
-}
-
-.filter-radio-buttons {
-  width: 367px; 
+.catalog-filter-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: 6px;
 }
 
 /*--------------ЧЕКБОКСЫ--------------*/
@@ -2479,154 +2580,80 @@ margin-right: 10px;
   color: #2d3440;
 }
 
-.control {
-  display: flex;
+.option {
+  display: block; /* стилизация */
   position: relative;
-  padding-left: 6px;
-  font-size: 14px;
-  line-height: 20px;
-  cursor: pointer;
+}
+.check {
+  padding-left: 8px; /* отодвигаем кастомные чекбоксы от текста (компенсируем изменение через margin-left у класса check-box) */
+}
+/* прячем браузерные чек-боксы и убираем пробел между текстом и инпутом */
+
+.check-input {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute; /* убираем пробел между текстом и инпутом */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* прячем браузерные чек-боксы и убираем пробел между текстом и инпутом */
+} 
+
+/* Вставляем собственные чекбоксы через <span class="check-box"></span> */
+
+.check-box {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: 16px;
+  background-image: url("../images/icons/icon-checkbox-off.svg");
+  margin-left: -30px;
 }
 
 /* Checked */
 
-.control-input:checked + .control-label {
-  background-image: url("../img/icons/check-on.svg");
+.check-input:checked + .check-box {
+  background-image: url("../images/icons/icon-checkbox-on.svg");
 }
-
 /* Focused */
 
-.control-input:focus + .control-label {
-  background-image: url("../img/icons/check-off-hover.svg");
+.check-input:focus + .check-box {
+  background-image: url("../images/icons/icon-checkbox-off-hover.svg");
 }
 
-.control-input:checked:focus + .control-label {
-  background-image: url("../img/icons/check-on-hover.svg");
+.check-input:checked:focus + .check-box {
+  background-image: url("../images/icons/icon-checkbox-on-hover.svg");
 }
 
 /* Hovered */
 
-.control-input:hover + .control-label {
-  background-image: url("../img/icons/check-off-hover.svg");
+.control-input:hover + .check-box {
+  background-image: url("../images/icons/icon-checkbox-off-hover.svg");
 }
 
-.control-input:checked:hover + .control-label {
-  background-image: url("../img/icons/check-on-hover.svg");
+.control-input:checked:hover + .check-box {
+  background-image: url("../images/icons/icon-checkbox-on-hover.svg");
 }
 
 /* Disabled */
 
-.control-input:disabled + .control-label {
-  background-image: url("../img/icons/check-disabled.svg");
+.check-input:disabled + .check-box {
+  background-image: url("../images/icons/icon-checkbox-disabled.svg");
 }
 
-.control-input:checked:disabled + .control-label {
-  background-image: url("../img/icons/check-on-disabled.svg");
-}
-
-.control:hover .control-mark {
-  border-color: #814B18;
-}
-
-.control-input:disabled + .control-mark {
-  border-color: #242424;
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  position: absolute;
-  top: 7px;
-  left: 2px;
-  width: 12px;
-  height: 2px;
-  background-color: #242424;
-  content: "";
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  transform: rotate(45deg);
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  transform: rotate(-45deg);
+.check-input:checked:disabled + .check-box {
+  background-image: url("../images/icons/icon-checkbox-on-disabled.svg");
 }
 
 
-/*--------------РАДИО-КНОПКА--------------*/
+/*--------------РАДИО-КНОПКИ--------------*/
 
-
-.catalog-filter-list {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: space-between; 
-}
-
-.catalog-filter-item {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  margin-right: 6px;
-}
-
-.control-mark-radio-button {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background: url("../images/icons/icon-radio-button-off.svg") no-repeat 50% 50%;
-  background-color: #fec7d5;
-}
-
-.control-mark-radio-button::before {
-  position: absolute;
-  content: "";
-  /* background-image: url("../images/icons/icon-radio-button-on.svg"); */
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  padding-right: 9px;
-  left: 100;
-  top: 0;
-  
-
-}
-
-/* Checked */
-
-.control-mark-radio-button:checked + .control-label-radio {
-  background-image: url("../images/icons/icon-radio-button-on.svg");
-}
-
-.control-mark-checkbox {
-  position: relative;
-}
-
-.control-mark-checkbox::before {
-  content: url("../images/icons/icon-checkbox-off.svg");
-  width: 24px;
-  height: 24px;
-  padding-right: 9px;
-}
-
-.control-input[type="radio"] + .control-mark {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.control-input[type="radio"]:checked + .control-mark::before {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: #242424;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  content: "";
+.filter-radio-buttons-wrapper {
+  width: 367px; 
+  /* outline: 5px solid red;
+  outline-offset: -5px; */
 }
 
 .control-label {
@@ -2634,7 +2661,54 @@ margin-right: 10px;
   font-size: 14px;
 }
 
+.check-radio-button {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: 16px;
+  background-image: url("../images/icons/icon-radio-button-off.svg");
+  margin-left: -30px;
+}
 
+/* Checked */
+
+.check-input:checked + .check-radio-button {
+  background-image: url("../images/icons/icon-radio-button-on.svg");
+}
+/* Focused */
+
+.check-input:focus + .check-radio-button {
+  background-image: url("../images/icons/icon-radio-button-off-hover.svg");
+}
+
+.check-input:checked:focus + .check-radio-button {
+  background-image: url("../images/icons/icon-radio-button-on-hover.svg");
+}
+
+/* Hovered */
+
+.control-input:hover + .check-radio-button {
+  background-image: url("../images/icons/radio-off-hover.svg");
+}
+
+.control-input:checked:hover + .check-radio-button {
+  background-image: url("../images/icons/radio-on-hover.svg");
+}
+
+/* Disabled */ 
+/* TODO Переименовать иконки по стандартной форме и оптимизировать! */
+
+.check-input:disabled + .check-radio-button {
+  background-image: url("../images/icons/radio-off.svg");
+}
+
+.check-input:checked:disabled + .check-radio-button {
+  background-image: url("../images/icons/radio-on.svg");
+}
+
+
+/*--------------ДРОП-ДАУН МЕНЮ--------------*/
 
 .select {
   position: relative;
@@ -2695,7 +2769,7 @@ margin-right: 10px;
   outline: none;
 }
 
-/* ===> SECTION: PRODUCTS <=== */
+/* ! ===> SECTION: PRODUCTS <=== */
 
 
 .product-list {
@@ -2716,7 +2790,6 @@ margin-right: 10px;
   column-gap: 30px;
 }
 
-
 /* ===> PAGINATION <=== */
 
 .product-pagination {
@@ -2734,7 +2807,6 @@ margin-right: 10px;
   /* outline: 5px solid green;
   outline-offset: -5px; */
 }
-
 
 .pagination-button-wrapper {
   margin-right: auto;
@@ -2777,7 +2849,6 @@ margin-right: 10px;
 .pagination-link {
   display: block;
   text-align: center;
-  color: rgb(45, 52, 64);
   color: #2d3440;
   text-decoration: none;
   width: 24px;
@@ -2788,6 +2859,7 @@ margin-right: 10px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  padding: 2px 0;
 }
 
 .pagination-link:hover {
@@ -2796,7 +2868,6 @@ margin-right: 10px;
 
 .pagination-current {
   margin: 0;
-  padding: 0;
   display: block;
   width: 24px;
   height: 24px;
