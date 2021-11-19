@@ -208,6 +208,9 @@
           </button> 
         </div>
         <div class="social-wrapper">
+          <h3 class="visually-hidden">
+            Социальные сети
+          </h3>
           <ul class="social-list social-link-list">
             <li class="social-item">
               <a class="social-button social-item-vk" href="https://vk.com/htmlacademy">
@@ -274,8 +277,7 @@
                 Малинка даром!
               </h3>
               <p class="text-normal banner-description">
-                При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малиновогоя&nbsp;варенья
-                бесплатно.
+                При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового&nbsp;варенья бесплатно.
               </p>
               <p class="button-gift">
                 <a class="button button-white" href="">
@@ -295,9 +297,8 @@
           <div class="banner-wrapper">
             <div class="banner-marshmallow-wrapper">
               <h3 class="banner-title">Маршмеллоу даром!</h3>
-              <p class="text-normal banner-description">При покупке 2 кг пломбира, добавим в&nbsp;ваш заказ упаковку
-                нежных зефирок&nbsp;совершенно
-                бесплатно.</p>
+              <p class="text-normal banner-description">При покупке 2 кг пломбира&nbsp;добавим в ваш заказ упаковку
+                нежных зефирок&nbsp;совершенно бесплатно.</p>
               <p class="button-gift">
                 <a class="button button-white" href="">
                   Хочу подарок
@@ -505,7 +506,7 @@
             вкусного, что у нас происходит. Обещаем не&nbsp;спамить и не слать всякой ненужной ерунды. Честно =)
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru">
-            <input type="email" name="subscription" placeholder="email@example.com" minlength="9" maxlength="35"
+            <input class="input-form-placeholder" type="email" name="subscription" placeholder="email@example.com" minlength="9" maxlength="35"
               required>
             <button class="button button-red" type="submit">Отправить</button>
           </form>
@@ -545,14 +546,14 @@
                     </span>
                   </button>
                 </label>
-                <input type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
+                <input class="input-form-placeholder" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
               </p>
 
               <p class="field-group delivery-form-phone">
                 <label class="form-label" for="delivery-phone">
                   Телефон
                 </label>
-                <input type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00"
+                <input class="input-form-placeholder" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00"
                   pattern="[0-9]{7,}" minlength="7" maxlength="15" required>
               </p>
 
@@ -565,7 +566,7 @@
                     </span>
                   </button>
                 </label>
-                <input type="text" id="delivery-address" name="delivery-address"
+                <input class="input-form-placeholder" type="text" id="delivery-address" name="delivery-address"
                   placeholder="ул. Большая Конюшенная, 19/8" minlength="7" required>
               </p>
               <button class="delivery-submit button button-red" type="submit">Отправить</button>
@@ -602,7 +603,7 @@
         <p class="contact-normal-small">
           (с 10 до 20 ежедневно)
         </p>
-        <button class="button button-red button-margin button-margin-left" type="button">
+        <button class="button button-red button-pixel-perfect" type="button">
           Форма обратной связи
         </button>
       </div>
@@ -620,11 +621,11 @@
     </h2>
 
     <!-- Иконки социальных сетей  -->
-    <div class="social-wrapper">
+    <div class="social-wrapper social-wrapper-footer">
       <h3 class="visually-hidden">
         Социальные сети
       </h3>
-      <ul class="social-list social-link-list">
+      <ul class="social-list social-link-list social-footer">
         <li class="social-item">
           <a class="social-button social-item-vk" href="https://vk.com/htmlacademy">
             <svg aria-hidden="true" focusable="false" width="24" height="24" fill="none"
@@ -685,12 +686,12 @@
           </li>
           <li class="footer-menu-item">
             <a href="#" class="">
-              О производстве
+              Наши документы
             </a>
           </li>
           <li class="footer-menu-item">
             <a href="#" class="">
-              Наши документы
+              О производстве
             </a>
           </li>
           <li class="footer-menu-item">
