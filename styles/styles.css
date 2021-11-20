@@ -3268,7 +3268,8 @@ li.popover-bridge-empty-cart::before {
 
 .popover-title {
   text-align: left;
-  margin-bottom: 32px;
+  margin-top: 12px;
+  margin-bottom: 31px;
 }
 
 .cart-items-list {
