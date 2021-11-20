@@ -44,6 +44,11 @@ body {
   outline-offset: -5px; */
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* Стандартный фоновый цвет задан в body. Он также соответствует первому слайдеру.
 При использование второго и третьего слайдеров, тегу body добавляется один из классов ниже */
 /* TODO Судя по всему нужно добавить в хедере полупрозрачность кнопкам / подложкам */
@@ -98,6 +103,7 @@ body.slider-three-background-yellow {
 /* lists <li> */
 
 .nav-item,
+.nav-user-item,
 .social-item,
 .footer-menu-item,
 .slider-pagination-item,
@@ -239,7 +245,7 @@ body.slider-three-background-yellow {
   content: url("../images/icons/icon-search.svg");
   width: 12px;
   height: 12px;
-  top: 25%;
+  top: 5px;
   left: 25%;
 }
 
@@ -248,7 +254,7 @@ body.slider-three-background-yellow {
   width: 18px;
   height: 18px;
   top: 8px;
-  left: 17px;
+  left: 16px;
 }
 
 .nav-basket::before {
@@ -534,20 +540,6 @@ body.slider-three-background-yellow {
   outline-offset: -5px;*/
 }
 
-.nav-list {
-  min-width: 400px;
-  margin: 0;
-  padding: 0;
-  padding-left: 8px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style-type: none;
-  flex-wrap: wrap;
-  /* outline: 5px solid green;
-  outline-offset: -5px; */
-}
-
 /* Левая часть меню */
 
 /* .nav-menu {
@@ -563,10 +555,18 @@ body.slider-three-background-yellow {
 .nav-list > .nav-item {
   position: relative;
   display: inline-block;
-  margin-right: 13px;
+  /* margin-right: 13px; */
   /* outline: 5px solid green;
   outline-offset: -5px; */
 }
+
+.user-list > .nav-user-item {
+  position: relative;
+  display: inline-block;
+  /* outline: 5px solid red;
+  outline-offset: -5px; */
+}
+
 .nav-link,
 .nav-link:visited {
   display: block;
@@ -688,6 +688,7 @@ body.slider-three-background-yellow {
 .nav-list {
   margin: 0;
   padding: 0;
+  min-width: 400px;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -699,8 +700,8 @@ body.slider-three-background-yellow {
 
 .user-list {
   min-width: 419px;
-  margin-left: auto; /*Привет, Катя. Тут должно быть 198 пикселей или авто подходит? */
-  margin-right: -15px;
+  margin-left: auto; 
+  margin-right: -20px;
   /* padding-top: 2px; */
   /* outline: 5px solid red;
   outline-offset: -5px; */
@@ -719,16 +720,25 @@ body.slider-three-background-yellow {
 .nav-user-item {
   padding: 0;
   margin: 0;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-left: -6px;
   /* outline: 5px solid green;
   outline-offset: -5px;  */
-
 }
+
 
 .nav-user-item button {
   border: none;
   margin-right: 0;
   border: 2px solid transparent;
 }
+
+.nav-list-item-pixel {
+  margin-right: 13px;
+}
+
 
 /* ===> SECTION 1: SLIDERS <=== */
 
