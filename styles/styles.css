@@ -16,6 +16,9 @@ html {
 
 body {
   margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width:1170px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -307,6 +310,7 @@ body.slider-three-background-yellow {
   box-shadow: 0 0 0 4px #f4c9d4;
   outline: none;
   text-align: center;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -353,6 +357,7 @@ body.slider-three-background-yellow {
   background-color: #ff2f64;
   color: #fcfcfc;
   border: 4px solid #f7baca;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -396,6 +401,7 @@ body.slider-three-background-yellow {
   color: #2d3440;
   text-decoration: none;
   border: 2px solid #ffffff;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -473,16 +479,6 @@ body.slider-three-background-yellow {
   border: 1px solid #b9b9b9;
 }
 
-/* 
-.input-form-placeholder:hover,
-.popover-login-input:hover,
-.popover-login-input:hover,
-.form-field:hover {
-  color: #2d3440;
-  border: 1px solid #2d3440;
-}
-*/
-
 .input-form-placeholder:focus,
 .input-subscription-form:focus,
 .popover-login-input:focus,
@@ -491,34 +487,6 @@ body.slider-three-background-yellow {
   box-shadow: inset 0 0 0 2px #000000;
   outline: none;
 } 
-
-/* .input-form-placeholder:invalid,
-.popover-login-input:invalid,
-.popover-login-input:invalid,
-.form-field:invalid {
-  background: #ffffff;
-  border: 1px solid #ea5454;
-  color: #2d3440;
-} */
-
-/* .input-form-placeholder:invalid:hover,
-.popover-login-input:invalid:hover,
-.popover-login-input:invalid:hover,
-.form-field:invalid:hover {
-  background: #ffffff;
-  border: 2px solid #ea5454;
-  color: #2d3440;
-}
-*/
-/* .input-form-placeholder:invalid:focus,
-.popover-login-input:invalid:focus,
-.popover-login-input:invalid:focus,
-.form-field:invalid:focus {
-  background: #ffffff;
-  border: 1px solid #ea5454;
-  color: #2d3440;
-  box-shadow: none;
-} */
 
 .input-form-placeholder:disabled,
 .input-subscription-form:disabled,
@@ -548,6 +516,12 @@ body.slider-three-background-yellow {
 .footer-menu-item-link:focus,
 .htmlacademy-logo-link:focus,
 .htmlacademy-link:focus {
+  box-shadow: inset 0 0 0 2px #000000;
+  outline: none;
+}
+
+.htmlacademy-logo-link:focus,
+.footer-copyright-logo:focus {
   box-shadow: inset 0 0 0 2px #000000;
   outline: none;
 }
@@ -695,8 +669,6 @@ body.slider-three-background-yellow {
   color: #2d3440;
   text-decoration: none;
 }
-
-/* Состояние элемента для выбранного раздела =>  background-color: #ff7799; color: #fcfcfc; */
 
 /* Правая часть навигации с попапами */
 
@@ -900,7 +872,6 @@ body.slider-three-background-yellow {
   margin: auto -19px;
   z-index: 1; 
 }
-/* Стрелочки (svg) внутри кнопок */
 
 button.button-slider svg {
   position: absolute;
@@ -1155,7 +1126,6 @@ button.button-slider svg {
   max-width: 570px;
 }
 
-/* класс создан ради пиксель-перфекта  */
 div.banner-marshmallow-wrapper {
   width: 329px;
 }
@@ -1229,7 +1199,7 @@ div.banner-marshmallow-wrapper {
   -webkit-border-radius: 8px 8px 8px 8px;
   -moz-border-radius: 8px 8px 8px 8px;
   border-radius: 8px 8px 8px 8px;
-  margin-top: 81px; /* ! @ было 80px*/
+  margin-top: 81px;
   padding-top: 0;
   padding-right: 40px;
   padding-bottom: 0;
@@ -1241,7 +1211,7 @@ div.banner-marshmallow-wrapper {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 27px; /* ! @ не было */
+  margin-bottom: 27px;
 }
 
 .product-card-button {
@@ -1304,7 +1274,7 @@ div.banner-marshmallow-wrapper {
 .product-card-description {
   margin: 0;
   padding: 0;
-  padding-top: 8px; /* ! @ не было*/
+  padding-top: 8px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1329,14 +1299,14 @@ div.banner-marshmallow-wrapper {
 }
 
 .product-card-image-link {
-  margin-top: -51px; /* ! @ было 54px */
+  margin-top: -51px;
   margin-bottom: 16px;
 }
 
 /* Price */
 .product-card-price {
   padding: 0;
-  margin-bottom: 0; /* ! @ было 31px => компенсировал через product-price-wrapper */
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -1363,7 +1333,7 @@ div.banner-marshmallow-wrapper {
   -moz-border-radius: 20px 20px 20px 20px;
   border-radius: 20px 20px 20px 20px;
   margin: 0 auto;
-  margin-bottom: 79px; /* ! @ было 80px */
+  margin-bottom: 79px;
   display: flex;
   flex-direction: column; 
 }
@@ -1373,9 +1343,9 @@ div.banner-marshmallow-wrapper {
   padding: 0;
   background-color: #fcfcfc;
   width: 1122px;
-  padding-top: 27px; /* ! @ было 24px */
+  padding-top: 27px;
   padding-right: 0px;
-  padding-bottom: 40px; /* ! @ было 41px */
+  padding-bottom: 40px;
   padding-left: 0px;
   -webkit-border-radius: 20px 20px 20px 20px;
   -moz-border-radius: 20px 20px 20px 20px;
@@ -1384,7 +1354,7 @@ div.banner-marshmallow-wrapper {
 
 .advantages-title {
   margin-top: 29px;
-  margin-bottom: 39px; /* ! @ было 42px */
+  margin-bottom: 39px;
 }
 
 .advantages-grid {
@@ -1422,7 +1392,7 @@ div.banner-marshmallow-wrapper {
   border-radius: 50%;
   border: 3px solid #2D3440;
   left: 76px;
-  top: 1px; /* ! @ было -1px */
+  top: 1px;
   transform: translateX(-140px); */
 }
 
@@ -1439,7 +1409,7 @@ div.banner-marshmallow-wrapper {
   width: 48px;
   height: 48px;
   left: -64px;
-  top: 16px; /* ! @ было 15px */
+  top: 16px;
 }
 
 .adva-3 {
@@ -1455,7 +1425,7 @@ div.banner-marshmallow-wrapper {
   width: 48px;
   height: 48px;
   left: -64px;
-  top: 16px; /* ! @ было 15px */
+  top: 16px;
 }
 
 .adva-4 {
@@ -1471,7 +1441,7 @@ div.banner-marshmallow-wrapper {
   width: 48px;
   height: 48px;
   left: -64px;
-  top: 16px; /* ! @ было 15px */
+  top: 16px;
 }
 
 .advantages-item-text {
@@ -1487,7 +1457,7 @@ div.banner-marshmallow-wrapper {
   justify-content: space-between;
   width: 1170px;
   align-items: flex-start;
-  margin-bottom: 76px; /* ! @ было 74px */ 
+  margin-bottom: 76px;
 }
 
 /* ARTICLE: SNIPPET FOR BLOGNEWS <=== */
@@ -1561,7 +1531,7 @@ div.banner-marshmallow-wrapper {
   padding-top: 26px; 
   padding-right: 20px; 
   padding-bottom: 26px; 
-  padding-left: 27px; /* ! @ было 23px */
+  padding-left: 27px;
   margin: 0 auto;
 }
 
@@ -1571,7 +1541,7 @@ div.banner-marshmallow-wrapper {
   font-size: 16px;
   line-height: 22px;
   color: #565c66;
-  margin-bottom: 38px; /* ! @ было 42px */
+  margin-bottom: 38px;
   margin-top: 0px;
 }
 
@@ -1921,8 +1891,8 @@ div.banner-marshmallow-wrapper {
   font-size: 20px;
   line-height: 24px;
   color: #2d3440;
-  padding-top: 14px; /* ! было 16px */
-  padding-bottom: 18px; /* ! было 17px */
+  padding-top: 14px; 
+  padding-bottom: 18px;
 }
 
 .contact-underlay-wrapper .nav-phone-number {
@@ -2053,7 +2023,7 @@ margin-right: 0;
   padding: 0;
   margin: 0;
   display: block;
-  margin-top: 47px; /* ! @ было 49px */
+  margin-top: 47px;
   margin-right: 14px;
   margin-bottom: 0;
   margin-left: 0;
@@ -2083,19 +2053,19 @@ margin-right: 0;
 
 .about-text {
   display: block;
-  padding-top: 2px; /* ! @ было 0 */
+  padding-top: 2px;
   padding-bottom: 15px; 
 }
 
 .footer-menu {
-  margin-top: 29px; /* ! @ было 30px */
+  margin-top: 29px;
 }
 
 .footer-menu-list {
   display:grid;
   grid-template-columns: 150px 206px;
   min-width: 380px;
-  row-gap: 6px; /* ! @ было 8px */
+  row-gap: 6px;
   padding-left: 62px;
 }
 
@@ -2388,8 +2358,11 @@ margin-right: 0;
 }
 
 .range-toggle::after {
+  position: absolute;
   content: "";
   display: block;
+  left: 6px;
+  top: 6px;
   width: 4px;
   height: 4px;
   background-color: #fcfcfc;
@@ -2408,7 +2381,20 @@ margin-right: 0;
 .range-toggle:focus {
   outline: none;
   background-color: #fcfcfc;
-  border-color: #2d3440;
+  box-shadow: inset 0 0 0 2px #000000;
+  outline: none;
+}
+
+.range-toggle:focus::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 6px;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  background-color: #2d3440;
+  border-radius: 50%;
 }
 
 .range-toggle:focus .range-toggle::after {
@@ -2458,7 +2444,6 @@ margin-right: 0;
   appearance: textfield;
 }
 
-/* отключаем стрелки у input */
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
@@ -2501,27 +2486,23 @@ margin-right: 0;
 }
 
 .option {
-  display: block; /* стилизация */
+  display: block;
   position: relative;
 }
 .check {
-  padding-left: 25px; /* отодвигаем кастомные чекбоксы от текста */
+  padding-left: 25px;
 }
-
-/* прячем браузерные чек-боксы и убираем пробел между текстом и инпутом */
 
 .check-input {
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  position: absolute; /* убираем пробел между текстом и инпутом */
+  position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; /* прячем браузерные чек-боксы и убираем пробел между текстом и инпутом */
+  appearance: none;
 }
-
-/* Вставляем собственные чекбоксы через <span class="check-box"></span> */
 
 .check-box {
   position: absolute;
@@ -2619,7 +2600,6 @@ margin-right: 0;
 }
 
 /* Disabled */
-/* TODO Переименовать иконки по стандартной форме и оптимизировать! */
 
 .check-input:disabled + .check-radio-button {
   background-image: url("../images/icons/radio-off.svg");
@@ -2721,7 +2701,7 @@ margin-right: 0;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 13px 2px 42px; /* ! @ было 40px */
+  margin: 13px 2px 42px;
 }
 
 .pagination-button-wrapper {
@@ -2867,16 +2847,16 @@ margin-right: 0;
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 34px; /* ! @ было 35px */
-  right: -1px; /* ! @ было 0 */
+  top: 34px;
+  right: -1px;
   z-index: 3;
   min-width: 420px;
   background-color: #f9f9f9;
   border-radius: 4px;
   margin-top: 8px;
-  padding-top: 29px; /* ! @ было 48px */
+  padding-top: 29px;
   padding-right: 48px;
-  padding-bottom: 53px; /* ! @ было 52px */
+  padding-bottom: 53px;
   padding-left: 48px;
   color: rgba(45, 52, 64, 1);
   display: none;
@@ -3089,7 +3069,7 @@ li.popover-bridge-menu::before {
   content: "";
   display: block;
   width: 100%;
-  height: 14px; /* ! @ былл 12px */
+  height: 14px;
   position: absolute;
   right: 0;
   top: 31px;
@@ -3271,8 +3251,8 @@ li.popover-bridge-empty-cart::before {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 13px; /* ! @ было 0 */
-  right: 14px; /* ! @ было 0 */
+  top: 13px;
+  right: 14px; 
   width: 56px;
   height: 56px;
   background-color: transparent;
