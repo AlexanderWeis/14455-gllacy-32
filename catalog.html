@@ -83,7 +83,6 @@
           <button type="button" class="button button-pink nav-customer-login">
             Вход
           </button>
-
           <!-- ПОПОВЕР для входа -->
           <div class="popover-customer popover-customer-login">
 
@@ -106,11 +105,12 @@
                   </p>
 
                   <div class="popover-customer-login-wrapper">
-                    <button class="popover-login-button" type="submit">Войти</button>
+                    <!-- <button class="popover-login-button" type="submit">Войти</button> -->
+                    <button class="button button-red popover-login-button" type="submit">Войти</button>
                     <div class="popover-customer-recovery-wrapper">
                       <ul class="recovery-list">
-                        <li class="recovery-item"><a class="auth-form-recovery" href="#">Забыли пароль?</a></li>
-                        <li class="recovery-item"><a class="auth-form-register" href="#">Регистрация</a></li>
+                        <li class="recovery-item recovery-item-line-first"><a class="auth-form-recovery" href="#">Забыли пароль?</a></li>
+                        <li class="recovery-item recovery-item-line-second"><a class="auth-form-register" href="#">Регистрация</a></li>
                       </ul>
                     </div>
                   </div>
@@ -776,9 +776,9 @@
       <h3 class="visually-hidden">
         Копирайт
       </h3>
-      <a href="#">
+      <a class="htmlacademy-logo-link" href="https://htmlacademy.ru/">
         <img class="footer-copyright-logo" src="images/logos/logo-htmlacademy.svg"
-          alt="Логотип онлайн-школы htmlacademy" width="93" height="27">
+          alt="Логотип онлайн-школы htmlacademy." width="93" height="27">
       </a>
       <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html
           academy</a>&nbsp;©&nbsp;2021
