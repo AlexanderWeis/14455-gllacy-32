@@ -1210,7 +1210,7 @@ div.banner-marshmallow-wrapper {
   -webkit-border-radius: 8px 8px 8px 8px;
   -moz-border-radius: 8px 8px 8px 8px;
   border-radius: 8px 8px 8px 8px;
-  margin-top: 76px; /* ! @ Было 80px*/
+  margin-top: 76px; /* ! @ было 80px*/
   padding-top: 0;
   padding-right: 40px;
   padding-bottom: 0;
@@ -1222,6 +1222,7 @@ div.banner-marshmallow-wrapper {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 27px; /* ! @ не было */
 }
 
 .product-card-button {
@@ -1271,12 +1272,13 @@ div.banner-marshmallow-wrapper {
   color: #2d3440;
   font-size: 20px;
   line-height: 24px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px;  */ /* сделал padding-top в product-card-description*/
 }
 
 .product-card-description {
   margin: 0;
   padding: 0;
+  padding-top: 8px; /* ! @ не было*/
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1301,14 +1303,14 @@ div.banner-marshmallow-wrapper {
 }
 
 .product-card-image-link {
-  margin-top: -51px; /* ! @ Было 54px */
+  margin-top: -51px; /* ! @ было 54px */
   margin-bottom: 16px;
 }
 
 /* Price */
 .product-card-price {
   padding: 0;
-  margin-bottom: 29px; /* ! @Было 31px */
+  margin-bottom: 0; /* ! @ было 31px => компенсировал через product-price-wrapper */
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
