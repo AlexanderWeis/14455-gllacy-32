@@ -47,7 +47,6 @@ img {
 
 /* Стандартный фоновый цвет задан в body. Он также соответствует первому слайдеру.
 При использование второго и третьего слайдеров, тегу body добавляется один из классов ниже */
-/* TODO Судя по всему нужно добавить в хедере полупрозрачность кнопкам / подложкам */
 
 body.slider-two-background-blue {
   background-color: #69a9ff;
@@ -198,8 +197,7 @@ body.slider-three-background-yellow {
   color: #565c66;
 }
 
-/* TODO Добавить классы для ссылок! */
-.footer-menu-item a {
+.footer-menu-item-link {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -518,6 +516,14 @@ input:invalid:not(:placeholder-shown) + .form__error {
   display: block;
 }
 
+input::placeholder {}
+input::target-text {}
+input:hover {}
+input:invalid {}
+input:invalid:focus {}
+input:invalid:hover {}
+input:disabled {}
+
 /* -----------------------------------------------------------
 --------------------------INDEX.html--------------------------
 ----------------------------------------------------------- */
@@ -696,7 +702,7 @@ input:invalid:not(:placeholder-shown) + .form__error {
   text-decoration: none;
 }
 
-/* TODO Состояние элемента для выбранного раздела =>  background-color: #ff7799; color: #fcfcfc; */
+/* Состояние элемента для выбранного раздела =>  background-color: #ff7799; color: #fcfcfc; */
 
 /* Правая часть навигации с попапами */
 
@@ -1196,7 +1202,7 @@ div.banner-marshmallow-wrapper {
 .products-heading {
   padding: 0;
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .product-card {
@@ -1210,7 +1216,7 @@ div.banner-marshmallow-wrapper {
   -webkit-border-radius: 8px 8px 8px 8px;
   -moz-border-radius: 8px 8px 8px 8px;
   border-radius: 8px 8px 8px 8px;
-  margin-top: 76px; /* ! @ было 80px*/
+  margin-top: 81px; /* ! @ было 80px*/
   padding-top: 0;
   padding-right: 40px;
   padding-bottom: 0;
@@ -2009,7 +2015,6 @@ div.banner-marshmallow-wrapper {
   background-color: #ffffff;
 }
 
-/* TODO Решить с цветом фокуса - делать синим или черным.  */
 .social-item-vk:focus,
 .social-item-facebook:focus,
 .social-item-instagram:focus {
@@ -2017,7 +2022,6 @@ div.banner-marshmallow-wrapper {
   box-shadow: inset 0 0 0 2px #000000;
   outline: none;
 }
-
 
 .social-wrapper {
   display: block;
@@ -2735,15 +2739,15 @@ margin-right: 0;
 /* ===> PAGINATION <=== */
 
 .product-pagination {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   padding: 40px 0;
   width: 1170px;
   min-height: 126px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 13px 2px 36px;
+  margin: 13px 2px 42px; /* ! @ было 40px */
 }
 
 .pagination-button-wrapper {
