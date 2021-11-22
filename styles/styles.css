@@ -414,6 +414,7 @@ body.slider-three-background-yellow {
 }
 
 .button-circle {
+  background-color: rgba(252, 252, 252, 0.3);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -444,6 +445,18 @@ body.slider-three-background-yellow {
   color: #aa7e8f;
   text-decoration: none;
   border: 2px solid #fdceda;
+}
+
+.button-circle:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+.button-circle:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 2px solid #2d3440;
+}
+
+.button-circle:active {
+  background-color: rgba(252, 252, 252, 1);
 }
 
 /* ------------------------- */
@@ -553,6 +566,7 @@ body.slider-three-background-yellow {
   width: 137px;
   padding: 0;
   margin: 0;
+  margin-top: 5px;
   margin-right: 16px; 
 }
 
@@ -560,7 +574,7 @@ body.slider-three-background-yellow {
 
 .main-nav {
   max-width: 420px;
-  margin-top: -3px;
+  margin-top: 0px;
 }
 
 /* Левая часть меню */
@@ -688,7 +702,7 @@ body.slider-three-background-yellow {
 }
 
 .nav-user-item {
-  margin-left: 14px;
+  margin-left: 12px;
 }
 
 
@@ -1269,6 +1283,7 @@ div.banner-marshmallow-wrapper {
   color: #2d3440;
   font-size: 20px;
   line-height: 24px;
+  word-break: break-word;
 }
 
 .product-card-description {
@@ -1281,6 +1296,7 @@ div.banner-marshmallow-wrapper {
   line-height: 22px;
   text-align: center;
   color: #565c66;
+  word-break: break-word;
 }
 
 .product-card-image {
@@ -1840,7 +1856,7 @@ div.banner-marshmallow-wrapper {
 }
 
 .contact-underlay {
-  max-width: 345px;
+  max-width: 343px;
   min-height: 364px;
   background-color: #fcfcfc;
   padding-top: 40px;
@@ -1848,9 +1864,9 @@ div.banner-marshmallow-wrapper {
   padding-bottom: 40px;
   padding-right: 40px;
   margin-left: 64px;
-  -webkit-border-radius: 20px 20px 20px 20px;
-  -moz-border-radius: 20px 20px 20px 20px;
-  border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  border-radius: 8px 8px 8px 8px;
   text-align: left; 
 }
 
@@ -1864,6 +1880,11 @@ div.banner-marshmallow-wrapper {
 .contact-normal {
   max-width: 205px;
   margin-bottom: -3px;
+}
+
+.сontact-telefon {
+  margin-top: 6px;
+  margin-bottom: 12px;
 }
 
 .nav-phone-number {
@@ -1883,7 +1904,7 @@ div.banner-marshmallow-wrapper {
   text-align: left;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 }
 
 .contact-bold {
@@ -2133,6 +2154,16 @@ margin-right: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  margin: -10px;
+}
+
+.nav-telefon a,
+.nav-telefon-innen a {
+  margin-right: -5px;
 }
 
 .inner-header a {
@@ -2157,8 +2188,8 @@ margin-right: 0;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: 28px;
-  margin-bottom: 18px; 
+  margin-top: 30px;
+  margin-bottom: 16px; 
 }
 
 .breadcrumbs-item {
